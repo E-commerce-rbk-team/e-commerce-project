@@ -28,6 +28,16 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     defaultValue: 'user',
   },
+  createdAt: {
+    type: DataTypes.DATE,
+    allowNull: false,
+    defaultValue: DataTypes.NOW,
+  },
+  updatedAt: {
+    type: DataTypes.DATE,
+    allowNull: false,
+    defaultValue: DataTypes.NOW,
+  },
 });
 
 module.exports = User;
