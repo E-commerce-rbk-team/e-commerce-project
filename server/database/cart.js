@@ -33,7 +33,9 @@ const Cart = sequelize.define('Cart', {
       key: 'id',  
     },
   },
-}, {
+}, 
+
+{
   tableName: 'cart', 
 });
 
