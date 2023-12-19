@@ -18,13 +18,11 @@ const Product = sequelize.define('Product', {
     type: DataTypes.TEXT,
   },
   available: {
-    type: DataTypes.STRING(255),
+    type: DataTypes.BOOLEAN,
     defaultValue: true,
   },
   imageUrl: {
-    type: DataTypes.ARRAY(DataTypes.STRING),
-    allowNull: true,
-    defaultValue: [],
+    type: DataTypes.STRING,
   },
   categories: {
     type: DataTypes.STRING,

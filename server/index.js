@@ -10,12 +10,9 @@ app.use(express.static(__dirname + '/../client/dist'))
 const commerceRoutes = require('./routes/commerce.js')
 const cartRoutes = require('./routes/cartRoute.js')
 const productRoute = require('./routes/productRoute.js')
-const wishlistRoute = require('./routes/wishRoute.js')
-
 app.use('/api', commerceRoutes); 
 app.use('/api', cartRoutes); 
 app.use('/api', productRoute); 
-app.use('/api', wishlistRoute); 
 
 app.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`)
