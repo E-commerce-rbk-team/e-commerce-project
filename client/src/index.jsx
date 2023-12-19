@@ -5,6 +5,7 @@ import SignUp from './components/Sign.jsx'
 function App() {
     return (
       <div>
+        <SignUp />
       </div>
     );
   }
