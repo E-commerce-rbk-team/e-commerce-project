@@ -8,8 +8,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(__dirname + '/../client/dist'))
 const commerceRoutes = require('./routes/commerce.js')
-
+const cartRoutes = require('./routes/cartRoute.js')
 app.use('/api', commerceRoutes); 
+app.use('/api', cartRoutes); 
 
 app.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`)
