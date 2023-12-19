@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('./index.js');
-const User = require('./User');
-const Product = require('./Product');
+const User = require('./User.js');
+const Product = require('./product');
 
 const Wishlist = sequelize.define('Wishlist', {
   id: {
@@ -25,9 +25,12 @@ const Wishlist = sequelize.define('Wishlist', {
       key: 'id',
     },
   },
-});
+},
+  {
+    tableName: 'wishlist', 
+  });
 
-Wishlist.belongsTo(User);
-Wishlist.belongsTo(Product);
+Wishlist.belongsTo(User, { foreignKey: 'UserId' });
+Wishlist.belongsTo(Product, { foreignKey: 'postId' });
 
 module.exports = Wishlist;
