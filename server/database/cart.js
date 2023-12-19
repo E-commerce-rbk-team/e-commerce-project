@@ -21,21 +21,23 @@ const Cart = sequelize.define('Cart', {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-      model: User,
+      model: 'User',
       key: 'id',
     },
   },
-  postId: {
+  postId: { 
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-      model: Product,
-      key: 'id',
+      model: 'Product', 
+      key: 'id',  
     },
   },
+}, {
+  tableName: 'cart', 
 });
 
-Cart.belongsTo(User);
-Cart.belongsTo(Product);
+Cart.belongsTo(User, { foreignKey: 'UserId' });
+Cart.belongsTo(Product, { foreignKey: 'postId' });
 
 module.exports = Cart;
