@@ -11,26 +11,27 @@ const Product = () => {
     console.log(products);
  return (
     <div>
-        <div className="product-timer">
+        <div className="product-timer1">
           <span>daysd</span>
           <span>hoursh</span>
           <span>minutesm</span>
           <span>secondss</span>
         </div>
+        <div class="allprod">
         {products.map((el,i)=>(
-    <div className="product">
-       <div className='pro'>
-      <img className="product-image" src={el.imageUrl}  />
-      <div className="product-info">
-        <h2 className="product-name">{el.productName}</h2>
-        <p className="product-original-price">$price1</p>
-        <p className="product-price">{el.price}DT</p>
-        
-        <button className="product-add-to-cart" >Add To Cart</button>
-        </div>
-      </div>
+    <div class="product-container">
+    <div class="product-image">
+      <img src={el.imageUrl} alt="" />
+      <button class="buy-button">Buy Now</button>
     </div>
+    <div class="product-details">
+      <div class="product-name">{el.productName}</div>
+      <div class="product-price">{el.price}DT</div>
+    </div>
+  </div>
+  
     ))}
+    </div>
     </div>
  );
 };
