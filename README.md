@@ -1,3 +1,4 @@
+Design
 This project is focused on rapid iteration and continuous deployment. Far above the viability of the application as a 'product' or your team as a potential start-up.
 
 Your teams have been assigned (seen below). You will work with your team to generate project ideas, delegate roles, and build something awesome.
