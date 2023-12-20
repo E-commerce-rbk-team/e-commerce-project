@@ -18,7 +18,7 @@ const SignUp = () => {
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
 
-            <button>Sign Up</button>
+            <button className="buttonn" >Sign Up</button>
           </form>
         </div>
         <div className="form-container sign-in-container">
@@ -28,7 +28,7 @@ const SignUp = () => {
             </div>
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
-            <button>Sign In</button>
+            <button className="buttonn" >Sign In</button>
           </form>
         </div>
         <div className="overlay-container">
@@ -36,12 +36,12 @@ const SignUp = () => {
             <div className="overlay-panel overlay-left">
               <h1>Welcome to OmniMarket!</h1>
               <p>"Welcome to OmniMarket! Sign up and unlock a world of limitless shopping experiences. Join us today for exclusive deals, seamless browsing, and personalized recommendations."</p>
-              <button className="ghost" onClick={handleSignIn}>Sign In</button>
+              <button className="buttonn" onClick={handleSignIn}>Sign In</button>
             </div>
             <div className="overlay-panel overlay-right">
               <h1>Hello, There!</h1>
               <p>Welcome back to OmniMarket! Sign in to continue exploring a vast array of products tailored just for you. Get ready to shop effortlessly, track orders, and enjoy a seamless shopping journey with us</p>
-              <button className="ghost" onClick={handleSignUp}>Sign Up</button>
+              <button className="buttonn" onClick={handleSignUp}>Sign Up</button>
             </div>
           </div>
         </div>

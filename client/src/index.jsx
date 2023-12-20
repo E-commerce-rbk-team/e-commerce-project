@@ -6,7 +6,6 @@ import WhishList from './components/WhishList.jsx';
 function App() {
     return (
       <div>
-       <WhishList/>
       </div>
     );
   }
