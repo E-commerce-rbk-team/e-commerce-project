@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../../dist/css/product.css';
+import '../css/Allprod.css';
 import axios from 'axios';
 const Product = () => {
     const [products, setProducts] = useState([]);
@@ -20,8 +20,8 @@ const Product = () => {
         <div class="allprod">
         {products.map((el,i)=>(
     <div class="product-container">
-    <div class="product-image">
-      <img src={el.imageUrl} alt="" />
+    <div class="product-image" key={i}>
+      <img src={el.imageUrl} />
       <button class="buy-button">Buy Now</button>
     </div>
     <div class="product-details">

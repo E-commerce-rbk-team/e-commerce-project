@@ -11,8 +11,6 @@
     display: flex;
     text-align: center;
     margin-left:450px ;
-  }
-  .line{
     text-decoration: underline;
     cursor: pointer;
   }
