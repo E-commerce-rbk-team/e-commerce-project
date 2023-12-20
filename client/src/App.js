@@ -10,6 +10,8 @@ import Categories from "./components/Categories.jsx"
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Navbar from './components/Navbarre.jsx'
+import Team from './components/team.jsx'
+
 function App() {
 
     return (
@@ -21,6 +23,8 @@ function App() {
       <Route path="/wishlist" element={<WhishList />} />
       <Route path="/sign" element={<SignUp />} />
       <Route path="/cart" element={<Cart/>} />
+      <Route path="/about" element={<Team/>} />
+
     </Routes>
     <Footer/>
 </BrowserRouter>
