@@ -9,8 +9,10 @@ const Footer = () => {
           <h2>Exclusive</h2>
           <p>Subscribe</p>
           <p>Get 10% off your first order</p>
-          <input type="email" placeholder="Enter your email" />
-          <button>Subscribe</button>
+        <div className='footersubs'>  <div className="email-input-container">
+    <input type="email" placeholder="Enter your email" />
+    <i className="fa-regular fa-paper-plane"></i>
+  </div></div> 
         </div>
         <div className="footer-support">
           <h2>Support</h2>
