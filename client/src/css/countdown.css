@@ -1,0 +1,49 @@
+.timer-container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .timer-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+   
+#timer-heading{
+position: relative;
+left: -660px;
+top: -40px;
+font-family: 'Roboto', sans-serif;
+color: red;
+
+}
+
+#timerrr-heading{
+    position: relative;
+    left: -660px;
+    top: -40px;
+    font-family: 'Roboto', sans-serif;
+    }
+
+  .timer {
+    font-size: 36px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    left: -410px;
+    top: -190px;
+  }
+  
+  .square {
+    width: 20px;
+    height: 40px;
+    background-color: #b82d2d; 
+    border: solid transparent;
+    border-radius: 5px;
+    margin-right: 10px;
+    position: relative;
+    top: -162px;
+  }
