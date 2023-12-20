@@ -69,3 +69,20 @@
   .product-price {
     color: #007bff;
   }
+  .sqandtxt {
+    display: flex;
+    align-items: center;
+  }
+  
+  .square {
+    width: 20px;
+    height: 40px;
+    background-color: #b82d2d; /* or any color you prefer */
+    border: solid transparent;
+    border-radius: 5px;
+    margin-right: 10px; /* Adjust margin as needed for spacing */
+  }
+  
+  .jfy {
+    margin: 0; /* Remove default margin on h2 */
+  }
