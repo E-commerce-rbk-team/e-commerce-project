@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../dist/css/WhishList.css'
+import '../css/Allprod.css'
 function WhishList() {
   return (
     <div className="allWish">

@@ -1,5 +1,5 @@
 import React from 'react'
-import './cart.css';
+import '../css/cart.css';
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 const Cart=()=> {
