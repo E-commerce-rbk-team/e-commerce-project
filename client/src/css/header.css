@@ -4,13 +4,15 @@
     justify-content: space-between;
     background-color: #0e0e0e;
     padding: 10px;
-    
+    font-family: 'Open Sans', sans-serif;
     color:rgb(231, 222, 222);
   }
   .centered{
     display: flex;
     text-align: center;
     margin-left:450px ;
+  }
+  .line{
     text-decoration: underline;
     cursor: pointer;
   }
