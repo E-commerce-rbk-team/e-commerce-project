@@ -12,10 +12,6 @@ const Product = () => {
  return (
     <div>
         <div className="product-timer1">
-          <span>daysd</span>
-          <span>hoursh</span>
-          <span>minutesm</span>
-          <span>secondss</span>
         </div>
         <div class="allprod">
         {products.map((el,i)=>(
