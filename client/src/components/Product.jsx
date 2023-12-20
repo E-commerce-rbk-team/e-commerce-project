@@ -19,9 +19,9 @@ const Product = () => {
         </div>
         <div class="allprod">
         {products.map((el,i)=>(
-    <div class="product-container">
-    <div class="product-image" key={i}>
-      <img src={el.imageUrl} />
+    <div class="product-container" key={i}>
+    <div class="product-image">
+      <img src={el.imageUrl[0]} alt="" />
       <button class="buy-button">Buy Now</button>
     </div>
     <div class="product-details">

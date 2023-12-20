@@ -6,12 +6,15 @@ import Product from './components/Product.jsx';
 import Home from './components/Home.jsx'
 import WhishList from './components/WhishList.jsx';
 import Cart from "./components/Cart.jsx"
-import Headers from './components/Header.jsx'
+import Categories from "./components/Categories.jsx"
+import Header from './components/Header.jsx';
+
+
 function App() {
 
     return (
       <BrowserRouter>
-      <Headers/>
+      <Header/>
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/wishlist" element={<WhishList />} />
