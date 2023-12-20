@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import '../../dist/css/sign.css'
+import '../css/sign.css';
 
 const SignUp = () => {
     const [isSignUp, setIsSignUp] = useState(false)
