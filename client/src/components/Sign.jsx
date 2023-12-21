@@ -1,38 +1,41 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-// import { useAuth } from '../AuthContext/authContext';
+import { useAuth } from './AuthContext.jsx';
 import '../css/sign.css';
 
 
 function Signup({setId}) {
   const { setToken } = useAuth();
   const navigate = useNavigate();
-
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleSignup = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-
+    const formData = new FormData(event.currentTarget)
+    const username= formData.get('username')
+    const  email= formData.get('email')
+    const  password= formData.get('password');
+    console.log("username",username)
     try {
-      const response = await axios.post('http://localhost:3000/api/users/add', {
-        username: formData.get('username'),
-        email: formData.get('email'),
-        password: formData.get('password'),
+    
+      const response = await axios.post('http://localhost:3000/api/register', {
+        username:username,
+        email: email,
+        password: password,
       });
-      // console.log("register",response.data);
-      const {email,username,token, id} = response.data;
-      console.log("id",id);
-
+     
+      // const {email,username,token, id} = response.data;
+     const {token}=response.data
+     console.log("dsrthn",response.data)
       if (email && username && token) {
         setToken(token);
-        setId(id);
+        setId(response.data.id);
         setSuccessMessage('Registration successful!');
         setErrorMessage('');
 
-        navigate(`/Home`); // id is done successfully
+        navigate(`/`); 
         
       } else {
         setSuccessMessage('');
@@ -49,7 +52,7 @@ function Signup({setId}) {
   return (
     <div className="container1">
       <div className="form-container1">
-        {/* <img src={image} alt="Lock Icon" className="lock-icon" /> */}
+        <img src="https://media.discordapp.net/attachments/1173529999295381524/1187087546820333608/image.png?ex=65959c6e&is=6583276e&hm=df9e9f1513c9b52dba719168ad71a4655e6c4eab87cd9f17edc9b97a54b0aee6&=&quality=lossless&width=375&height=248" alt="Lock Icon" className="lock-icon" />
         <h2 className="title1">Sign up</h2>
         <form onSubmit={handleSignup} className="form1">
           <label className="label1">
