@@ -11,7 +11,9 @@ function Head() {
             <NavLink to={`/`} className="nav-link">Home</NavLink>
             <NavLink to={'/Contact'} className="nav-link">Contact</NavLink>
             <NavLink to={'/About'} className="nav-link">About</NavLink>
-            <NavLink to={'/Sign'} className="nav-link">Sign Up</NavLink>
+            <NavLink to={'/Login'} className="nav-link">Login</NavLink>
+            <NavLink to={'/Sign'} className="nav-link"></NavLink>
+
           </div>
           <div className="nav-search">
           <IoSearch />
