@@ -9,15 +9,17 @@ const Footer = () => {
           <h2>Exclusive</h2>
           <p>Subscribe</p>
           <p>Get 10% off your first order</p>
-          <input type="email" placeholder="Enter your email" />
-          <button>Subscribe</button>
+        <div className='footersubs'>  <div className="email-input-container">
+    <input type="email" placeholder="Enter your email" />
+    <i className="fa-regular fa-paper-plane"></i>
+  </div></div> 
         </div>
         <div className="footer-support">
           <h2>Support</h2>
-          <p>111 Bijoy sarani, Dhaka,</p>
-          <p>DH 1515, Bangladesh.</p>
-          <p>exclusive@gmail.com</p>
-          <p>+88015-88888-9999</p>
+          <p>  3 Ane Habib Bourguiba</p>
+          <p>Cite El Khrachfa,Mednine</p>
+          <p>OmniMarket@Support.com</p>
+          <p>75387555</p>
         </div>
       
       

@@ -6,31 +6,19 @@ import Product from './components/Product.jsx';
 import Home from './components/Home.jsx'
 import WhishList from './components/WhishList.jsx';
 import Cart from "./components/Cart.jsx"
-import Contact from './components/Contact.jsx';
-import Categories from "./components/Categories.jsx"
-import Header from './components/Header.jsx';
-import Footer from './components/Footer.jsx';
-import Navbar from './components/Navbarre.jsx'
-import Team from './components/team.jsx'
-
-
 function App() {
 
     return (
       <BrowserRouter>
-      <Header/>
-      <Navbar/>
     <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/wishlist" element={<WhishList />} />
+      <Route path="/" element={<WhishList/>} />
+      <Route path="/wishlist" element={<Home />} />
       <Route path="/sign" element={<SignUp />} />
       <Route path="/cart" element={<Cart/>} />
-      <Route path="/about" element={<Team/>} />
-
     </Routes>
-    <Footer/>
 </BrowserRouter>
     );
   }
 
-export default App;
+
+ReactDOM.render(<App />, document.getElementById('App'))
