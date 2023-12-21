@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter , Routes, Route} from 'react-router-dom';
 import ReactDOM from 'react-dom'
-import SignUp from './components/Sign.jsx'
+
 import Product from './components/Product.jsx';
 import Home from './components/Home.jsx'
 import WhishList from './components/WhishList.jsx';
@@ -12,7 +12,8 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Navbar from './components/Navbarre.jsx'
 import Team from './components/team.jsx'
-
+import Login from './components/Login.jsx';
+import Sign from './components/Sign.jsx'
 
 function App() {
 
@@ -21,11 +22,14 @@ function App() {
       <Header/>
       <Navbar/>
     <Routes>
+    <AuthContext.Provider value={{ token: state.token, setToken, clearToken }}/>
       <Route path="/" element={<Home/>} />
       <Route path="/wishlist" element={<WhishList />} />
-      <Route path="/sign" element={<SignUp />} />
+      <Route path="/Login" element={<Login />} />
       <Route path="/cart" element={<Cart/>} />
+      <Route path="/contact" element={<Contact/>} />
       <Route path="/about" element={<Team/>} />
+      <Route path="/Sign" element={<Sign/>} />
 
     </Routes>
     <Footer/>

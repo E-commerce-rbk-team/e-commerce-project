@@ -11,11 +11,13 @@ function Head() {
             <NavLink to={`/`} className="nav-link">Home</NavLink>
             <NavLink to={'/Contact'} className="nav-link">Contact</NavLink>
             <NavLink to={'/About'} className="nav-link">About</NavLink>
-            <NavLink to={'/Sign'} className="nav-link">Sign Up</NavLink>
+            <NavLink to={'/Login'} className="nav-link">Login</NavLink>
+            <NavLink to={'/Sign'} className="nav-link"></NavLink>
+
           </div>
           <div className="nav-search">
           <IoSearch />
-          <input type="search" placeholder='hello' />
+          <input type="search" placeholder='Search  ' />
           <NavLink to="/Cart" >
   <img className="navcartt" src="https://static.thenounproject.com/png/1074958-200.png" alt="Cart" />
 </NavLink>          </div >
