@@ -13,8 +13,8 @@
     flex-direction: column;
     gap: 16px;
     position: relative;
-    border-right: 1px solid #c7c7c7; /* Add a solid black line to the right */
-    padding-right: 10px; /* Add some padding to separate the line from text */
+    border-right: 1px solid #c7c7c7; 
+    padding-right: 10px; 
   }
   .Allcategory .div {
     align-items: flex-start;

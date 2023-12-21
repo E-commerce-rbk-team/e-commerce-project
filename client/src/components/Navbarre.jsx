@@ -6,7 +6,7 @@ function Head() {
   return (
     <header>
         <nav className="navbar">
-          <img className="logo" src="https://media.discordapp.net/attachments/1186723460072865853/1187531378980573304/image-removebg-preview.png?ex=659739c8&is=6584c4c8&hm=165c6ac25e9118be3713903e3e9f8abb01bd00cc7b8ff15f8d88e0a03ad14f5f&=&quality=lossless&width=375&height=248" alt="Logo"/>
+<a href="/"><img className="logo" src="https://media.discordapp.net/attachments/1186723460072865853/1187531378980573304/image-removebg-preview.png?ex=659739c8&is=6584c4c8&hm=165c6ac25e9118be3713903e3e9f8abb01bd00cc7b8ff15f8d88e0a03ad14f5f&=&quality=lossless&width=375&height=248" alt="Logo"/></a>
           <div className="nav-links">
             <NavLink to={`/`} className="nav-link">Home</NavLink>
             <NavLink to={'/Contact'} className="nav-link">Contact</NavLink>
