@@ -19,7 +19,7 @@ const Register = async (req, res) => {
       password,
       email,
       role,
-     // user_img:'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+      user_img:'https://cdn-icons-png.flaticon.com/512/149/149071.png',
       password: hashedPassword}
      
       createUser({ body: newUser }, res);
@@ -32,9 +32,7 @@ const Register = async (req, res) => {
 const Login = async(req, res) => {
     const{email,password}=req.body;
     try {
-        console.log("rhstnt");
          const result= await Users.findOne({ where :{email:email}})
-         console.log('dfbdfbetb',result)
          if(result ===null) res.send("email not found")
          else {
           const verif=result.dataValues.password

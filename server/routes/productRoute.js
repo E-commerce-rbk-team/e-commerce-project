@@ -3,7 +3,7 @@ const ProductController = require('../controllers/ProductController');
 const authenticateToken = require('../middleware/jwtAuthMiddleware');
 
 // POST create a new product
-router.post('/products',authenticateToken, ProductController.createProduct);
+router.post('/products', ProductController.createProduct);
 
 // GET all products
 router.get('/products', ProductController.getAllProducts);

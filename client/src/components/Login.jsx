@@ -3,12 +3,12 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import "../css/sign.css"
 import { useAuth } from './AuthContext.jsx';
-// import logo from '../assets/logo2.png'
+
 
 function Login({setId}) {
   const { setToken } = useAuth();
   const navigate = useNavigate();
-  console.log(useAuth)
+  
 
   const [errorMessage, setErrorMessage] = useState('');
   const [loading, setLoading] = useState(false);
@@ -21,19 +21,18 @@ function Login({setId}) {
 
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:3000/login', {
+      const response = await axios.post('http://localhost:3000/api/login', {
         email: formData.get('email'),
         password: formData.get('password'),
       });
-      const {token, userId} = response.data;
-
-      if (userId && token) {
+      const {token, id} = response.data;
+      console.log("ugzrg",token)
+      if (id && token) {
         const { token } = response.data;
         setToken(token);
         setErrorMessage('');
         setLoading(false);
-        // Redirect user to the home page after successful login
-        setId(userId)
+        setId(id)
         navigate(`/Home`);
       } else {
         setErrorMessage('Login failed. Please check your credentials.');
@@ -44,12 +43,13 @@ function Login({setId}) {
       setLoading(false);
       console.error('Error during login:', error);
     }
+   
   };
 
   return (
     <div className="container1">
       <div className="form-container1">
-        {/* <div className='logo-login1'><img src={logo} alt="" /></div> */}
+        <div className='logo-login1'><img src="https://media.discordapp.net/attachments/1173529999295381524/1187087546820333608/image.png?ex=65959c6e&is=6583276e&hm=df9e9f1513c9b52dba719168ad71a4655e6c4eab87cd9f17edc9b97a54b0aee6&=&quality=lossless&width=375&height=248" alt="" /></div>
         <h2 className="title1">Login</h2>
         <form onSubmit={handleSubmit} className="form1">
           <label className="label1">
