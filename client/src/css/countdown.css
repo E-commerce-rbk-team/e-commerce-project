@@ -1,7 +1,7 @@
 .timer-container {
     text-align: center;
     margin-top: 50px;
-    font-family: Arial, sans-serif;
+    font-family: 'poppins', sans-serif;
   }
   
   .timer-heading {
@@ -12,18 +12,18 @@
    
 #timer-heading{
 position: relative;
-left: -660px;
-top: -40px;
-font-family: 'Roboto', sans-serif;
+left: -390px;
+top: 200px;
+font-family: 'poppins', sans-serif;
 color: red;
 
 }
 
 #timerrr-heading{
     position: relative;
-    left: -660px;
-    top: -40px;
-    font-family: 'Roboto', sans-serif;
+    left: -360px;
+    top: 200px;
+    font-family: 'poppins', sans-serif;
     }
 
   .timer {
@@ -33,17 +33,19 @@ color: red;
     border-radius: 5px;
     display: inline-block;
     position: relative;
-    left: -410px;
-    top: -190px;
+    left: -200px;
+    top: 60px;
   }
   
   .square {
     width: 20px;
-    height: 40px;
+    height: 30px;
     background-color: #b82d2d; 
     border: solid transparent;
     border-radius: 5px;
     margin-right: 10px;
     position: relative;
-    top: -162px;
+    top: 90px;
+    left: 255px;
+
   }
