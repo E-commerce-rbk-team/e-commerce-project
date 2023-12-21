@@ -34,7 +34,7 @@ const ColorPicker = () => {
           style={{
             ...circleStyle,
             backgroundColor: color === 'black' ? 'black' : 'black',
-            boxShadow: color === 'black' ? '0 0 0 3px #00FF00' : 'none', // Added box shadow when selected
+            boxShadow: color === 'black' ? '0 0 0 3px #00FF00' : 'none',
           }}
         />
         <button
@@ -43,7 +43,7 @@ const ColorPicker = () => {
           style={{
             ...circleStyle,
             backgroundColor: color === 'Beige' ? 'Beige' : 'Beige',
-            boxShadow: color === 'Beige' ? '0 0 0 3px #00FF00' : 'none', // Added box shadow when selected
+            boxShadow: color === 'Beige' ? '0 0 0 3px #00FF00' : 'none', 
           }}
         />
       </div>
