@@ -48,7 +48,7 @@ function Login({setId}) {
   return (
     <div className="container1">
       <div className="form-container1">
-        <div className='logo-login1'><img src="https://media.discordapp.net/attachments/1173529999295381524/1187087546820333608/image.png?ex=65959c6e&is=6583276e&hm=df9e9f1513c9b52dba719168ad71a4655e6c4eab87cd9f17edc9b97a54b0aee6&=&quality=lossless&width=375&height=248" alt="" /></div>
+        <div className='logo-login1'><img src="https://media.discordapp.net/attachments/1186723460072865853/1187531378980573304/image-removebg-preview.png?ex=659739c8&is=6584c4c8&hm=165c6ac25e9118be3713903e3e9f8abb01bd00cc7b8ff15f8d88e0a03ad14f5f&=&quality=lossless&width=375&height=248" alt="" /></div>
         <h2 className="title1">Login</h2>
         <form onSubmit={handleSubmit} className="form1">
           <label className="label1">
