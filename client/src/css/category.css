@@ -1,0 +1,21 @@
+.category-flex{
+    display:flex;
+  flex-wrap: wrap;
+justify-content: space-between;
+background-color: white;
+}
+.category-flex1{
+  border-width:10px;
+  border: solid;
+  border-radius: 10px;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+}
+.category-flex1:hover{
+  transform: scale(1.1);
+}
+.category-icon{
+  width: 80px;
+  height: 80px;
+}
