@@ -64,7 +64,7 @@ function ProductDetails() {
     <div class="square"></div>
   <h2 class="jfy">Related Items</h2>
   </div>
-    <Product/>
+  <div>
     <Rating/>
     <Color/>
     <SizePicker/>
@@ -72,6 +72,8 @@ function ProductDetails() {
     <CartButton/>
     <WishlistButton/>
     <DeliveryOptions/>
+    </div>
+    <Product/>
 
     </div>
   );

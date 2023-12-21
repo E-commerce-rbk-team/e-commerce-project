@@ -3,8 +3,7 @@ import "../css/category.css"
 function Categories() {
   return (<div>
     <div class="sqandtxt">
-    <div class="square"></div>
-    <h2 class="jfy">Ckeck our Categories:</h2>
+    <h2 class="jfy">Browse By Categories:</h2>
   </div>
     <div className="category-flex">
         <div className="category-flex1">

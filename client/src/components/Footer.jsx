@@ -24,19 +24,19 @@ const Footer = () => {
       
       
         <div className="footer-links">
-          <p>Quick Link</p>
+          <h2>Quick Link</h2>
           <p>Privacy Policy</p>
           <p>Terms Of Use</p>
           <p>FAQ</p>
           <p>Contact</p>
         </div>
         <div className="footer-download">
-          <p>Download App</p>
-          <p>Save $3 with App</p>
-          <p>New User Only</p>
-          <p>3 OUT FOR</p>
-          <p>Google Play</p>
-          <p>App Store</p>
+          <h2>Download App</h2>
+          <p>Save $3 with App New User Only </p>
+          <img id="appImage" src="https://assets.stickpng.com/images/5a902dbf7f96951c82922875.png" alt="App" />
+          <img id="qrCode" src="https://cdn.britannica.com/17/155017-050-9AC96FC8/Example-QR-code.jpg" alt="App" />
+          <img id="appStore" src="https://assets.stickpng.com/thumbs/5a902db97f96951c82922874.png" alt="App" />
+
         </div>
         </div>
    
