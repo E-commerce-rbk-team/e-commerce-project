@@ -1,4 +1,5 @@
 const User = require('../database/User.js');
+const authenticateToken = require('../middleware/jwtAuthMiddleware');
 
 // Get all users
 async function getAllUsers(req, res) {
@@ -69,6 +70,11 @@ async function deleteUserById(req, res) {
     res.status(500).json({ error: error.message });
   }
 }
+async function getUserDetails(req, res) {
+  // This route is protected and requires authentication
+  const userDetails = req.user;
+  res.json({ userDetails });
+}
 
 module.exports = {
   getAllUsers,
@@ -76,4 +82,5 @@ module.exports = {
   createUser,
   updateUserById,
   deleteUserById,
+  getUserDetails, // Adding getUserDetails function to the export list
 };

@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import "../css/sign.css"
-// import { useAuth } from '../AuthContext/authContext.jsx';
+import { useAuth } from './AuthContext.jsx';
 // import logo from '../assets/logo2.png'
 
 function Login({setId}) {
-//   const { setToken } = useAuth();
+  const { setToken } = useAuth();
   const navigate = useNavigate();
+  console.log(useAuth)
 
   const [errorMessage, setErrorMessage] = useState('');
   const [loading, setLoading] = useState(false);
@@ -33,7 +34,7 @@ function Login({setId}) {
         setLoading(false);
         // Redirect user to the home page after successful login
         setId(userId)
-        navigate(`/Home/${userId}`);
+        navigate(`/Home`);
       } else {
         setErrorMessage('Login failed. Please check your credentials.');
         setLoading(false);

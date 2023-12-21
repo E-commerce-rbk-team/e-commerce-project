@@ -22,9 +22,10 @@ function App() {
       <Header/>
       <Navbar/>
     <Routes>
+    <AuthContext.Provider value={{ token: state.token, setToken, clearToken }}/>
       <Route path="/" element={<Home/>} />
       <Route path="/wishlist" element={<WhishList />} />
-      <Route path="/Login" element={<Login/>} />
+      <Route path="/Login" element={<Login />} />
       <Route path="/cart" element={<Cart/>} />
       <Route path="/contact" element={<Contact/>} />
       <Route path="/about" element={<Team/>} />

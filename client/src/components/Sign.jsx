@@ -6,7 +6,7 @@ import '../css/sign.css';
 
 
 function Signup({setId}) {
-  // const { setToken } = useAuth();
+  const { setToken } = useAuth();
   const navigate = useNavigate();
 
   const [successMessage, setSuccessMessage] = useState('');
