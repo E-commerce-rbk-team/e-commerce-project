@@ -7,6 +7,7 @@ import Home from './components/Home.jsx'
 import WhishList from './components/WhishList.jsx';
 import Cart from "./components/Cart.jsx"
 import Headers from './components/Header.jsx'
+import Contact from './components/Contact.jsx';
 function App() {
 
     return (
