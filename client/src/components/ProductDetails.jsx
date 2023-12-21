@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Rating from './Rating.jsx'; // Import the new RatingComponent
+import Rating from './Rating.jsx'; 
 import '../css/ProdDetails.css';
 import Product from './Product';
 
