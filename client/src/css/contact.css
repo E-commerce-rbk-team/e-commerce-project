@@ -1,4 +1,6 @@
-
+.contact{
+  background-color: white;
+}
 .placebox-info {
   position: relative;
   width: 235px;
@@ -28,7 +30,6 @@
   font-weight: 500;
   margin-left: 10px;
 }
-
 .frame-group {
   position: absolute;
   top: 40px;
@@ -41,7 +42,6 @@
 }
 .contact-inner {
   position: absolute;
-  top: 323px;
   left: 504px;
   border-radius: var(--br-9xs);
   background-color: var(--bg);
@@ -102,18 +102,16 @@
   width: 250px;
 }
 .frame-container {
-  position: absolute;
-  top: 40px;
-  left: 35px;
+  position: absolute; 
+  margin-top: 60px;
+  margin-left: 200px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--gap-13xl);
 }
-.frame-div {
-  position: absolute;
-  top: 323px;
+.frame-div {  
   left: 135px;
   border-radius: var(--br-9xs);
   background-color: var(--bg);

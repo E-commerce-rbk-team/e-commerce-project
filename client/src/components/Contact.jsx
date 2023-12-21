@@ -89,11 +89,6 @@ const Messsage=(id,obj)=>{
         </div>
       </div>
     </div>
-    <div class="footer">
-      <div class="underline-parent">
-        <img class="underline-icon2" alt="" src="./public/underline@2x.png" />
-      </div>
-    </div>
   </div>
 
 

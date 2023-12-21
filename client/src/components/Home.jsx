@@ -1,9 +1,9 @@
 import React from 'react'
 import Product from './Product'
-
+import ProductDetails from './ProductDetails.jsx'
 function Home() {
   return (
-    <div><Product/></div>
+    <div><ProductDetails/></div>
 
   )
 }
