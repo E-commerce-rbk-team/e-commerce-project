@@ -13,8 +13,17 @@ import Navbar from './components/Navbarre.jsx'
 import Team from './components/team.jsx'
 import Login from './components/Login.jsx';
 import Sign from './components/Sign.jsx'
+
+import AdminDashboard from './components/adminComponents/AdminDashboard.jsx'
+import Products from './components/adminComponents/Products.jsx'
+import UserList from './components/adminComponents/Users.jsx'
+import SellerList from './components/adminComponents/SellerList.jsx'
+import ClientList from './components/adminComponents/ClientList.jsx'
+
+
 import axios from 'axios';
 import { useRadioGroup } from '@mui/material';
+
 function App() {
 const [id,setId]=useState(0)
 const [userData, setUserData] = useState(null);
@@ -36,7 +45,7 @@ useEffect(() => {
   fetchUserData();
   
 }, [id]); 
-console.log("user1",userData);
+
     return (
     <div>
       <Header/>
@@ -49,7 +58,16 @@ console.log("user1",userData);
       <Route path="/cart" element={<Cart/>} />
       <Route path="/contact" element={<Contact/>} />
       <Route path="/about" element={<Team/>} />
+
+
+      <Route path="/Admin" element={<AdminDashboard/>} />
+      <Route path="/Products" element={<Products/>} />
+      <Route path="/users" element={<UserList/>} />
+      <Route path="/sellers" element={<SellerList/>} />
+      <Route path="/clients" element={<ClientList/>} />
+
       <Route path="/Sign" element={<Sign setId={setId}/>} />
+
 
     </Routes>
     <Footer/>
