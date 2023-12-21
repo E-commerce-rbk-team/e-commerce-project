@@ -13,7 +13,9 @@ import Footer from './components/Footer.jsx';
 import Navbar from './components/Navbarre.jsx'
 import Team from './components/team.jsx'
 import Login from './components/Login.jsx';
-import Sign from './components/Sign.jsx'
+import Sign from './components/Sign.jsx';
+import EditUser from './components/EditUser.jsx';
+ import Slider from './components/Slider.jsx';
 
 function App() {
 
@@ -24,7 +26,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/wishlist" element={<WhishList />} />
-      <Route path="/Login" element={<Login/>} />
+      <Route path="/Login" element={<Slider/>} />
       <Route path="/cart" element={<Cart/>} />
       <Route path="/contact" element={<Contact/>} />
       <Route path="/about" element={<Team/>} />
