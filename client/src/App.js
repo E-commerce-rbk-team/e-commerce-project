@@ -6,10 +6,9 @@ import Product from './components/Product.jsx';
 import Home from './components/Home.jsx'
 import WhishList from './components/WhishList.jsx';
 import Cart from "./components/Cart.jsx"
+import Contact from './components/Contact.jsx';
 import Categories from "./components/Categories.jsx"
 import Header from './components/Header.jsx';
-
-
 function App() {
 
     return (
