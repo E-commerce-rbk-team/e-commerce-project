@@ -8,8 +8,6 @@ import { useAuth } from './AuthContext.jsx';
 function Login({setId}) {
   const { setToken } = useAuth();
   const navigate = useNavigate();
-  
-
   const [errorMessage, setErrorMessage] = useState('');
   const [loading, setLoading] = useState(false);
   
@@ -18,22 +16,23 @@ function Login({setId}) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-
+    const email= formData.get('email')
+    const password =formData.get('password')
     try {
       setLoading(true);
       const response = await axios.post('http://localhost:3000/api/login', {
-        email: formData.get('email'),
-        password: formData.get('password'),
+        email: email,
+        password: password,
       });
       const {token, id} = response.data;
-      console.log("ugzrg",token)
+       console.log(response.data);
       if (id && token) {
         const { token } = response.data;
         setToken(token);
         setErrorMessage('');
         setLoading(false);
         setId(id)
-        navigate(`/Home`);
+        navigate(`/`);
       } else {
         setErrorMessage('Login failed. Please check your credentials.');
         setLoading(false);
@@ -54,11 +53,11 @@ function Login({setId}) {
         <form onSubmit={handleSubmit} className="form1">
           <label className="label1">
             Email Address:
-            <input type="email" name="userEmail" required className="input1" />
+            <input type="email" name="email" required className="input1" />
           </label>
           <label className="label1">
             Password:
-            <input type="password" name="userPassword" required className="input1" />
+            <input type="password" name="password" required className="input1" />
           </label>
           <button type="submit" className="button1" disabled={loading}>
             {loading ? 'Logging in...' : 'Login'}
