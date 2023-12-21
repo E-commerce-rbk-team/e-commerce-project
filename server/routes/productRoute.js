@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const ProductController = require('../controllers/ProductController');
+const authenticateToken = require('../middleware/jwtAuthMiddleware');
 
 // POST create a new product
-router.post('/products', ProductController.createProduct);
+router.post('/products',authenticateToken, ProductController.createProduct);
 
 // GET all products
 router.get('/products', ProductController.getAllProducts);

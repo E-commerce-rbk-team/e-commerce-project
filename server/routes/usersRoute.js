@@ -1,6 +1,12 @@
 const router = require('express').Router();
 const UserController = require('../controllers/UserController');
+const { Register, Login } = require('../controllers/authController');
 
+const authenticateToken = require('../middleware/jwtAuthMiddleware');
+console.log(authenticateToken);
+// router.get('/user', authenticateToken, UserController.getUserDetails);
+router.post('/login', Login);
+router.post('/register', Register);
 // GET all users
 router.get('/users/getall', UserController.getAllUsers);
 
