@@ -52,6 +52,8 @@
   .in-stock,
   .separator {
     margin-left: 5px;
+    position: relative;
+    right: -120px;
   }
   
   .productprice {
