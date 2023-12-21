@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import Rating from './Rating.jsx'; // Import the new RatingComponent
 import '../css/ProdDetails.css';
 import Product from './Product';
+
 function ProductDetails() {
   const [hoveredImage, setHoveredImage] = useState(null);
 
@@ -43,7 +45,6 @@ function ProductDetails() {
       <div className="product-info-container">
       <div className="productname">Product Name</div>
       <div className="productrating">
-        <span className="rating">4.5</span>
         <span className="reviews"> (150 reviews)</span>
         <span className="separator"> | </span>
         <span className="in-stock">In Stock</span>
@@ -58,6 +59,8 @@ function ProductDetails() {
   <h2 class="jfy">just for you</h2>
   </div>
     <Product/>
+    <Rating/>
+
     </div>
   );
 }

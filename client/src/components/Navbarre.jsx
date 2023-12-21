@@ -15,7 +15,7 @@ function Head() {
           </div>
           <div className="nav-search">
           <IoSearch />
-          <input type="search" placeholder='hello' />
+          <input type="search" placeholder='Search  ' />
           <NavLink to="/Cart" >
   <img className="navcartt" src="https://static.thenounproject.com/png/1074958-200.png" alt="Cart" />
 </NavLink>          </div >
