@@ -25,10 +25,10 @@ const Product = sequelize.define('Product', {
     defaultValue: true,
   },
   imageUrl: {
-    type: DataTypes.STRING,
+    type: DataTypes.JSON,
   },
   categories: {
-    type: DataTypes.STRING,
+    type: DataTypes.JSON,
   },
   size: {
     type: DataTypes.STRING(50),

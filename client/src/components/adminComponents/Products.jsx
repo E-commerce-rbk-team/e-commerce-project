@@ -114,7 +114,7 @@ const ProductList = () => {
         />
         <input
           type="text"
-          name="availability"
+          name="available"
           placeholder="Product availability"
           value={newProduct.available}
           onChange={handleInputChange}
