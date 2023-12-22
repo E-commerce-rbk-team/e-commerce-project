@@ -75,7 +75,8 @@ const Cart=()=> {
       <div className="box">
       <h4 className="title">Cart Total:</h4>
         <div className="center">
-<h5 className="center"> Coupon:</h5>
+
+<h5 className="center">Insert your Email And Get your Discount:</h5>
 <input className="inp" type="text" />
 <button className="but">Use Coupon</button></div><br /><br />
 <div className="left">subtotal:</div>

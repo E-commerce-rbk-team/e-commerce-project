@@ -12,7 +12,9 @@ import Footer from './components/Footer.jsx';
 import Navbar from './components/Navbarre.jsx'
 import Team from './components/team.jsx'
 import Login from './components/Login.jsx';
-import Sign from './components/Sign.jsx'
+import Sign from './components/Sign.jsx';
+import EditUser from './components/EditUser.jsx';
+// import Slider from './components/Slider.jsx';
 
 import AdminDashboard from './components/adminComponents/AdminDashboard.jsx'
 import Products from './components/adminComponents/Products.jsx'
@@ -51,24 +53,19 @@ console.log(userData);
       <Header/>
       <Navbar user={userData}/>
     <Routes>
-   
       <Route path="/" element={<Home/>} />
       <Route path="/wishlist" element={<WhishList />} />
-      <Route path="/Login" element={<Login  setId={setId}/>} />
-      <Route path="/cart" element={<Cart/>} />
       <Route path="/contact" element={<Contact/>} />
       <Route path="/about" element={<Team/>} />
-
-
+      <Route path="/EditUser" element={<EditUser/>} />
+      <Route path="/Login" element={<Login  setId={setId}/>} />
+      <Route path="/cart" element={<Cart/>} />
       <Route path="/Admin" element={<AdminDashboard/>} />
       <Route path="/Products" element={<Products/>} />
       <Route path="/users" element={<UserList/>} />
       <Route path="/sellers" element={<SellerList/>} />
       <Route path="/clients" element={<ClientList/>} />
-
       <Route path="/Sign" element={<Sign setId={setId}/>} />
-
-
     </Routes>
     <Footer/>
     </div>

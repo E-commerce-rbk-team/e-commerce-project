@@ -17,9 +17,9 @@ const UserList = () => {
     fetchUsers();
   }, []);
 
-  const handleDeleteUser = async (userId) => {
+  const handleDeleteUser = async (Id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/users/${userId}`);
+      await axios.delete(`http://localhost:3000/api/users/${Id}`);
       const response = await axios.get('http://localhost:3000/api/users/getall');
       setUsers(response.data);
     } catch (error) {
