@@ -45,11 +45,11 @@ useEffect(() => {
   fetchUserData();
   
 }, [id]); 
-
+console.log(userData);
     return (
     <div>
       <Header/>
-      <Navbar/>
+      <Navbar user={userData}/>
     <Routes>
    
       <Route path="/" element={<Home/>} />
