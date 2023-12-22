@@ -1,4 +1,9 @@
 const User = require('../database/User.js');
+const jwt =require('jsonwebtoken')
+const generateToken = (id, username) => {
+  const expiresIn = 60 * 60 * 48;
+  return jwt.sign({ id, username }, 'secretKey', { expiresIn: expiresIn });
+};
 
 // Get all users
 async function getAllUsers(req, res) {
@@ -29,7 +34,9 @@ async function getUserById(req, res) {
 async function createUser(req, res) {
   try {
     const newUser = await User.create(req.body);
-    res.status(201).json(newUser);
+    const token = generateToken(newUser.id,newUser.username);
+    newUser.dataValues.token=token
+    res.status(201).send(newUser);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

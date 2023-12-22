@@ -16,24 +16,59 @@ import Sign from './components/Sign.jsx';
 import EditUser from './components/EditUser.jsx';
 // import Slider from './components/Slider.jsx';
 
+import AdminDashboard from './components/adminComponents/AdminDashboard.jsx'
+import Products from './components/adminComponents/Products.jsx'
+import UserList from './components/adminComponents/Users.jsx'
+import SellerList from './components/adminComponents/SellerList.jsx'
+import ClientList from './components/adminComponents/ClientList.jsx'
+
+
+import axios from 'axios';
+import { useRadioGroup } from '@mui/material';
+
 function App() {
+const [id,setId]=useState(0)
+const [userData, setUserData] = useState(null);
+useEffect(() => {
+  const fetchUserData = async () => {
+    try {
+      const response = await axios.get(`http://localhost:3000/api/users/${id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
+        },
+      });
+     
+      setUserData(response.data);
+      
+    } catch (error) {
+      console.error('Error fetching user data', error);
+    }
+  };
+  fetchUserData();
+  
+}, [id]); 
 
     return (
-      <BrowserRouter>
+    <div>
       <Header/>
       <Navbar/>
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/wishlist" element={<WhishList />} />
-      <Route path="/Login" element={<EditUser/>} />
-      <Route path="/cart" element={<Categories/>} />
       <Route path="/contact" element={<Contact/>} />
       <Route path="/about" element={<Team/>} />
-      <Route path="/Sign" element={<Sign/>} />
       <Route path="/EditUser" element={<EditUser/>} />
+      <Route path="/Login" element={<Login  setId={setId}/>} />
+      <Route path="/cart" element={<Cart/>} />
+      <Route path="/Admin" element={<AdminDashboard/>} />
+      <Route path="/Products" element={<Products/>} />
+      <Route path="/users" element={<UserList/>} />
+      <Route path="/sellers" element={<SellerList/>} />
+      <Route path="/clients" element={<ClientList/>} />
+      <Route path="/Sign" element={<Sign setId={setId}/>} />
     </Routes>
     <Footer/>
-</BrowserRouter>
+    </div>
     );
   }
 

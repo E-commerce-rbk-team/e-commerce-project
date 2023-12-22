@@ -1,8 +1,10 @@
-.category-flex{
-    display:flex;
+.category-flex {
+  display: flex;
   flex-wrap: wrap;
-justify-content: space-between;
-background-color: white;
+  justify-content: space-around;
+  margin-top: 20px;
+  top: 500px;
+  position: relative;
 }
 .category-flex1{
   border-width:10px;
@@ -19,6 +21,7 @@ background-color: white;
   width: 80px;
   height: 80px;
 }
+
 .square {
   width: 20px;
   height: 40px;
@@ -30,4 +33,3 @@ background-color: white;
 .jfy {
   margin: 0; 
   
-}
