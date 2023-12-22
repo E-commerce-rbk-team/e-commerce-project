@@ -3,7 +3,7 @@ const sequelize = require('./index.js');
 const User = require('./User');
 const Product = require('./product.js');
 
-const Wishlist = sequelize.define('Wishlist', {
+const Wishlist = sequelize.define('wishlists', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -17,13 +17,22 @@ const Wishlist = sequelize.define('Wishlist', {
       key: 'id',
     },
   },
-  postId: {
+  ProductId: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
       model: Product,
       key: 'id',
     },
+  },createdAt: {
+    type: DataTypes.DATE,
+    allowNull: false,
+    defaultValue: DataTypes.NOW,
+  },
+  updatedAt: {
+    type: DataTypes.DATE,
+    allowNull: false,
+    defaultValue: DataTypes.NOW,
   },
 });
 
