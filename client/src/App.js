@@ -47,14 +47,14 @@ useEffect(() => {
   fetchUserData();
   
 }, [id]); 
-console.log(userData);
+console.log("userdata",userData);
     return (
     <div>
       <Header/>
       <Navbar user={userData}/>
     <Routes>
       <Route path="/" element={<Home/>} />
-      <Route path="/wishlist" element={<WhishList />} />
+      <Route path="/wishlist" element={<WhishList  user={userData}/>} />
       <Route path="/contact" element={<Contact/>} />
       <Route path="/about" element={<Team/>} />
       <Route path="/EditUser" element={<EditUser/>} />

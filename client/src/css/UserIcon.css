@@ -1,0 +1,35 @@
+.userDropdown {
+    margin-left: 80px;
+    position: relative;
+    display: inline-block;
+}
+.userDropdown img{
+    width:50px;
+    height: 40px;
+}
+.userdropcontent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 200px;
+    right: 0;
+}
+.userdropcontent.visible {
+    display: block;
+  }
+.userdropcontent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.userdropcontent a:hover {
+    background-color: #ddd;
+}
+
+.userDropdown:hover #dropdownContent {
+    display: block;
+}
