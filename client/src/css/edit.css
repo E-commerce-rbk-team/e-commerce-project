@@ -6,7 +6,13 @@
     background-color: white;
     padding: 20px;
   }
-
+.link1{
+  color:#ae1313
+  
+}
+.link2{
+  color:#111
+}
   .menu {
     flex: 1;
     width: 150px;
@@ -19,6 +25,7 @@
   .notGras:hover{
     color: rgb(142, 70, 70);
     cursor: pointer;
+    margin-left: 10px;
   }
 
   .menu h2 {
@@ -60,8 +67,8 @@
     border: solid #333;
     border-radius: 8px;
     padding: 20px;
-    width: 700px;
-    height: 600px;
+    width: 900px;
+    height: 800px;
     flex-direction: column;
     align-items: stretch;
     background-color: white;
@@ -135,10 +142,18 @@
   text-align: center;
   font-size:25px
 }
+
 .inputUser {
   background-color: transparent;
   border: 1.5px solid #c14b53;
   width: 200px;
+  height: 25px;
+  border-radius: 20px;
+}
+.inputUser1 {
+  background-color: transparent;
+  border: 1.5px solid #c14b53;
+  width: 550px;
   height: 25px;
   border-radius: 20px;
 }

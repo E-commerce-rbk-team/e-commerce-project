@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter , Routes, Route} from 'react-router-dom';
 import ReactDOM from 'react-dom'
-
 import Product from './components/Product.jsx';
 import Home from './components/Home.jsx'
 import WhishList from './components/WhishList.jsx';
@@ -15,7 +14,7 @@ import Team from './components/team.jsx'
 import Login from './components/Login.jsx';
 import Sign from './components/Sign.jsx';
 import EditUser from './components/EditUser.jsx';
- import Slider from './components/Slider.jsx';
+// import Slider from './components/Slider.jsx';
 
 function App() {
 
@@ -26,12 +25,12 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/wishlist" element={<WhishList />} />
-      <Route path="/Login" element={<Slider/>} />
-      <Route path="/cart" element={<Cart/>} />
+      <Route path="/Login" element={<EditUser/>} />
+      <Route path="/cart" element={<Categories/>} />
       <Route path="/contact" element={<Contact/>} />
       <Route path="/about" element={<Team/>} />
       <Route path="/Sign" element={<Sign/>} />
-
+      <Route path="/EditUser" element={<EditUser/>} />
     </Routes>
     <Footer/>
 </BrowserRouter>
