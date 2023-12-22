@@ -47,7 +47,7 @@ useEffect(() => {
   fetchUserData();
   
 }, [id]); 
-console.log(userData);
+console.log("userdata",userData);
     return (
     <div>
       <Header/>
