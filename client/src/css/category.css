@@ -22,8 +22,14 @@
   height: 80px;
 }
 
-.jfy{
-position: absolute;
-bottom: -620px;
+.square {
+  width: 20px;
+  height: 40px;
+  background-color: #b82d2d; 
+  border: solid transparent;
+  border-radius: 5px;
+  margin-right: 10px; }
 
+.jfy {
+  margin: 0; 
 }

@@ -82,6 +82,7 @@ const CartPage = () => {
           ))}
         </tbody>
       </table>
+
       <div class="summary-box">
         <div>
           <p>Cart Total</p>
@@ -95,6 +96,26 @@ const CartPage = () => {
           <span class="input-highlight"></span>
         </div>
         <button class="bn15">Apply Coupon</button>
+
+
+      <br /><br />
+      <div className="vl"></div>
+      <div className="wrapper">
+      <div className="box">
+      <h4 className="title">Cart Total:</h4>
+        <div className="center">
+
+<h5 className="center">Insert your Email And Get your Discount:</h5>
+<input className="inp" type="text" />
+<button className="but">Use Coupon</button></div><br /><br />
+<div className="left">subtotal:</div>
+<div className="right">650Dt</div>
+<div className="left">shipping:</div>
+<div className="right">free</div>
+<div className="left">total:</div>
+<div className="right">650Dt</div>
+<div className="center"><button className="but">BUY NOW !</button></div>
+
       </div>
         </div>
       </div>
