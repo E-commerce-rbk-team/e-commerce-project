@@ -66,7 +66,7 @@ console.log("userdata",userData);
       <Route path="/sellers" element={<SellerList/>} />
       <Route path="/clients" element={<ClientList/>} />
       <Route path="/Sign" element={<Sign setId={setId}/>} />
-      <Route path="/details" element={<ProductDetails/>} />
+      <Route path="/details" element={<ProductDetails user={userData}/>} />
     </Routes>
     <Footer/>
     </div>

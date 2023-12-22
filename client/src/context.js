@@ -4,7 +4,18 @@ import { useNavigate } from 'react-router-dom';
 const DataContext = createContext();
 const DataProvider = ({ children }) => {
     const navigate = useNavigate();
-    const [oneProduct, setOneproduct] = useState({});
+    const [oneProduct, setOneproduct] = useState({categories:"electronics"});
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        axios.get('http://localhost:3000/api/products')
+          .then((response) => {
+            setProducts(response.data);
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      }, []);
+
     const handleOneProd=(id)=>{
         axios.get(`http://localhost:3000/api/products/${id}`).then((res)=>{
         setOneproduct(res.data)
@@ -12,7 +23,7 @@ const DataProvider = ({ children }) => {
     }).catch((err)=>console.log(err))
     }
     return (
-        <DataContext.Provider value={{ oneProduct, setOneproduct,handleOneProd }}>
+        <DataContext.Provider value={{ oneProduct, setOneproduct,handleOneProd,products }}>
           {children}
         </DataContext.Provider>
       );
