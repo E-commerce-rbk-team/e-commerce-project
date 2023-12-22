@@ -2,7 +2,7 @@ const router = require('express').Router();
 const cartController = require('../controllers/cartController');
 
 // GET all cart items for a specific user
-router.get('/cart/:userId', cartController.getAllCart);
+router.get('/cart/:userId', cartController.getProductInfoByPostId);
 
 // DELETE a cart item for a specific user
 router.delete('/cart/:userId/:cartItemId', cartController.deleteCartItem);
