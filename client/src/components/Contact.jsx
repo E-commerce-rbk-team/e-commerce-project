@@ -17,30 +17,32 @@ const Messsage=(id,obj)=>{
       <div class="frame-group">
         <div class="placebox-info-parent">
           <div class="placebox-info">
-            <div class="place-to-info-box"></div>
-            <div class="md">
-              <input type="text" onChange={(event)=>{setName(event.target.value)}} placeholder=' Name' />
-              
-            </div>
+          <div class="input-container">
+  <input placeholder="Name" class="input-field" type="text"></input>
+  <label for="input-field" class="input-label">Name</label>
+  <span class="input-highlight"></span>
+</div>
           </div>
           <div class="placebox-info">
-            <div class="place-to-info-box"></div>
-            <div class="md">
-             <input type="Email" onChange={(event)=>{setEmail(event.target.value)}} placeholder=' Email'/>
-              
-            </div>
+            <div class="input-container"></div>
+            <div class="input-container">
+  <input placeholder="Email" class="input-field" type="text"></input>
+  <label for="input-field" class="input-label">Email</label>
+  <span class="input-highlight"></span>
+</div>
           </div>
           <div class="placebox-info">
-            <div class="place-to-info-box"></div>
-            <div class="md">
-             <input type="number" onChange={(event)=>{setNumbre(event.target.value)}} placeholder='Phone Number'/>
-           
-            </div>
+            <div class="input-container"></div>
+            <div class="input-container">
+  <input placeholder="Phone Number" class="input-field" type="text"></input>
+  <label for="input-field" class="input-label">Phone Number</label>
+  <span class="input-highlight"></span>
+</div>
           </div>
         </div>
         <div class="placebox-info3">
-          <div class="place-to-info-box"></div>
-          <div class="md">
+          <div class="input-container"></div>
+          <div class="input-container">
               <input className='Your-Message' type="text" placeholder=' message' />
           </div>
         </div>
