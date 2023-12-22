@@ -7,7 +7,7 @@
 }
 .image-container {
     display: flex;
-    gap: 16px; /* Adjust the gap as needed */
+    gap: 16px; 
     flex-direction: column;
    
   }
@@ -20,7 +20,7 @@
   
   .display-image {
     width: 500px;
-    height: 600px; /* Calculated height to maintain aspect ratio */
+    height: 600px; 
     object-fit: cover;
   }
   .related{
