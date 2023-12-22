@@ -5,18 +5,10 @@ import CountdownTimer from './countdown';
 import Categories from './Categories';
 import { DataContext } from '../context.js'
 const Product = () => {
-  const [products, setProducts] = useState([]);
+  
   const [showAll, setShowAll] = useState(false);
-  const { handleOneProd } = useContext(DataContext);
-  useEffect(() => {
-    axios.get('http://localhost:3000/api/products')
-      .then((response) => {
-        setProducts(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
+  const {handleOneProd,products } = useContext(DataContext);
+ 
 
   return (
     <div>
@@ -42,7 +34,6 @@ const Product = () => {
               <div className="product-details" >
                 <div className="product-name">{el.productName}</div>
                 <div className="product-price">{el.price}DT</div>
-                
               </div>
             </div>
           );
