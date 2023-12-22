@@ -40,9 +40,16 @@
   .active-link {
     border-bottom: 2px solid white;
   }
-  .navcart{
-    color: rgb(71, 10, 83);
-    text-decoration: none;
-    padding: 10px;
-    margin-left: 30px;
+  .navcartt{
+width: 200%;
+position: relative;
+right: -50px;
   }
+
+  .logo{
+    width: 40%;
+height: inherit;
+background: transparent;
+
+  }
+  
