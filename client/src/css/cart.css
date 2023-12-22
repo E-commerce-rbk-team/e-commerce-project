@@ -102,8 +102,11 @@ input[type="number"]:focus {
 }
 
 
+<<<<<<< Updated upstream
 
 /* Input container */
+=======
+>>>>>>> Stashed changes
 .input-container {
   position: relative;
   margin: 20px;
@@ -138,7 +141,6 @@ input[type="number"]:focus {
 
 }
 
-/* Input field */
 .input-field {
   display: block;
   width: 100%;
@@ -150,7 +152,6 @@ input[type="number"]:focus {
   background-color: transparent;
 }
 
-/* Input label */
 .input-label {
   position: absolute;
   top: 0;
@@ -161,7 +162,6 @@ input[type="number"]:focus {
   transition: all 0.3s ease;
 }
 
-/* Input highlight */
 .input-highlight {
   position: absolute;
   bottom: 0;
@@ -172,7 +172,6 @@ input[type="number"]:focus {
   transition: all 0.3s ease;
 }
 
-/* Input field:focus styles */
 .input-field:focus + .input-label {
   top: -20px;
   font-size: 12px;
@@ -199,6 +198,7 @@ input[type="number"]:focus {
   top: -285px;
   border: 3px solid #ffffff;
   border-radius: 20px;
+  cursor: pointer ;
 }
 
 .summary-box {
@@ -238,5 +238,5 @@ left: 1000px;
   position: relative;
   border-radius: 0px;
   font-family: 'Poppins',sans-serif;
-
+cursor: pointer;
 }

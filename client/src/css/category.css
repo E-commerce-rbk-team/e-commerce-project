@@ -5,23 +5,21 @@
   margin-top: 20px;
   top: 500px;
   position: relative;
+  justify-content: space-between;
 }
 .category-flex1{
   border-width:10px;
-  border: solid;
-  border-radius: 10px;
   text-align: center;
-  width: 150px;
-  height: 150px;
-}
-.category-flex1:hover{
-  transform: scale(1.1);
+  width: 220px;
+  height: 100px;
+  margin-right: auto;
 }
 .category-icon{
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
 }
 
+<<<<<<< Updated upstream
 .square {
   width: 20px;
   height: 40px;
@@ -33,3 +31,15 @@
 .jfy {
   margin: 0; 
 }
+=======
+.jfy{
+position: absolute;
+bottom: -620px;
+font-size: 25px;
+
+}
+
+.category-flex1:last-child {
+  margin-right: 0;
+}
+>>>>>>> Stashed changes
