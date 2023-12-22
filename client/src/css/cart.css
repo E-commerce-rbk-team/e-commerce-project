@@ -1,4 +1,3 @@
-
 /* CartPage.css */
 .cart-container {
   max-width: 600px;
@@ -36,111 +35,23 @@ input[type="number"] {
 
 }
 
-.cart {
-     width: 100%;
-    border-collapse: collapse;
-    margin-top: 0px;
-    width:950px;
-  }
-  .caart {
-    flex: 1;
-    text-align: center;
-    margin-top:10px;
-    background-color: #c57171;
-    color:white;
-    padding: 6px;
-    font-size: 20px;
-    
-  }
-  
-
-  .head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f2f2f2;
-    padding: 7px;
-  }
-  
-  .titles {
-    flex: 1;
-    text-align: center;
-  }
-  .titles:hover {
-    transform: scale(1.1);
-    color: #dc47ad;
-
-  }
-  
-  .sth {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 7px;
-   
-  }
-
-
-
 
 input[type="number"]:focus {
   outline: none;
   font-family: 'poppins', sans-serif;
 
-  }
-  
-  .image {
-   
-    max-height: 100px; 
-  }
-  
-  #options {
-    width: 100px;
-  height: 30px }
-
-
 }
 
 
-<<<<<<< Updated upstream
-
 /* Input container */
-=======
->>>>>>> Stashed changes
 .input-container {
   position: relative;
   margin: 20px;
   top:-230px;
   right: 1000px;
-
-  .flexy{display:flex}
-  .vl {
-    margin-left: 50px;
-    border-left: 1px solid rgb(23, 28, 23);
-    height: 650px;
-    
-  }
-  .left{
-    text-align: start;
-  }
-  .right{
-    text-align: end;
-  }
-  .but {
-    width: 130px;
-    height: 40px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    right: -10px;
-    z-index: 0;
-    border-radius: 10px;
-
 }
 
+/* Input field */
 .input-field {
   display: block;
   width: 100%;
@@ -152,6 +63,7 @@ input[type="number"]:focus {
   background-color: transparent;
 }
 
+/* Input label */
 .input-label {
   position: absolute;
   top: 0;
@@ -162,6 +74,7 @@ input[type="number"]:focus {
   transition: all 0.3s ease;
 }
 
+/* Input highlight */
 .input-highlight {
   position: absolute;
   bottom: 0;
@@ -172,6 +85,7 @@ input[type="number"]:focus {
   transition: all 0.3s ease;
 }
 
+/* Input field:focus styles */
 .input-field:focus + .input-label {
   top: -20px;
   font-size: 12px;
@@ -198,7 +112,6 @@ input[type="number"]:focus {
   top: -285px;
   border: 3px solid #ffffff;
   border-radius: 20px;
-  cursor: pointer ;
 }
 
 .summary-box {
@@ -238,5 +151,5 @@ left: 1000px;
   position: relative;
   border-radius: 0px;
   font-family: 'Poppins',sans-serif;
-cursor: pointer;
+
 }

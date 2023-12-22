@@ -19,7 +19,6 @@
   height: 200px;
 }
 
-<<<<<<< Updated upstream
 .square {
   width: 20px;
   height: 40px;
@@ -31,15 +30,3 @@
 .jfy {
   margin: 0; 
 }
-=======
-.jfy{
-position: absolute;
-bottom: -620px;
-font-size: 25px;
-
-}
-
-.category-flex1:last-child {
-  margin-right: 0;
-}
->>>>>>> Stashed changes
