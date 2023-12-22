@@ -1,0 +1,3 @@
+.logout a:before {
+    content: "";
+  }

@@ -171,7 +171,7 @@ const setImg =(imageUrl)=>{
             <th>User ID</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="aff">
           {products.map((products) => (
             <tr key={products.id}>
               <td>{products.id}</td>
