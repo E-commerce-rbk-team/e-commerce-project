@@ -55,7 +55,7 @@ console.log("userdata",userData);
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/wishlist" element={<WhishList />} />
-      <Route path="/contact" element={<SalesProduct/>} />
+      <Route path="/contact" element={<Contact  />} />
       <Route path="/about" element={<Team/>} />
       <Route path="/EditUser" element={<EditUser/>} />
       <Route path="/Login" element={<Login  setId={setId}/>} />
@@ -70,6 +70,7 @@ console.log("userdata",userData);
     </Routes>
     <Footer/>
     </div>
+    
     );
   }
 
