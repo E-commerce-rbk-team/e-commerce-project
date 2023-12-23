@@ -2,22 +2,11 @@ import React, { useState, useEffect,useContext } from 'react';
 import axios from 'axios';
 import '../css/cart.css';
 import { DataContext } from '../context.js'
-const CartPage = () => {
+const CartPage = ({user}) => {
   const [cart, setCart] = useState([]);
   const [showOrder, setShowOrder] = useState(false);
-  const { cartList,quantity } = useContext(DataContext);
-  useEffect(() => {
-    const userId = 1; // Replace '1' with the actual user ID
-    axios.get(`http://localhost:3000/api/cart/${userId}`)
-      .then((response) => {
-        console.log(response.data);
-        setCart(response.data); // Assuming the response contains an array of cart items for the user
-      })
-      .catch((error) => {
-        console.error('Error fetching cart items:', error);
-      });
-  }, []);
-console.log("cartlist",cartList);
+  const { cartList,quantity,oneProduct,setCartList } = useContext(DataContext);
+  
   const handleQuantityChange = (id, quantity) => {
     const updatedCart = cartList.map((item) =>
       item.id === id ? { ...item, quantity } : item
@@ -31,12 +20,28 @@ console.log("cartlist",cartList);
     }, 0);
   };
 
+  const checkout=()=>{
+    const axiosRequests = cartList.map((e, i) =>
+    axios.post("http://localhost:3000/api/cart", {
+      UserId: user.id,
+      ProductId: e.product.id,
+      quantity: e.quantity,
+      total: total,
+    })
+  );
+  Promise.all(axiosRequests)
+    .then((responses) => {
+      setCartList([]);
+    })
+    .catch((err) => console.log(err));
+  }
   const calculateTotal = () => {
     const subtotal = calculateSubtotal();
     const shipping = 7; // Fixed shipping cost
 
     return subtotal + shipping;
   };
+  const [total,setTotal]=useState(calculateTotal())
   return (
     <div>
       <strong>Home / Cart</strong>
@@ -82,7 +87,7 @@ console.log("cartlist",cartList);
           <p>Subtotal: ${calculateSubtotal()}</p>
           <p>Shipping: $7</p>
           <p>Total: ${calculateTotal()}</p>
-          <button className='bn14'>Process To CheckOut</button>
+          <button className='bn14' onClick={()=>checkout()}>Process To CheckOut</button>
           <div class="placebox-info">
         <div class="input-container">
           <input placeholder="Coupon Code" class="input-field" type="text" />
