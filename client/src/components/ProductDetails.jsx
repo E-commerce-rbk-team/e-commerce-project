@@ -59,7 +59,6 @@ function ProductDetails({user}) {
       </div>
       <div className="productprice">{oneProduct&&oneProduct.price}DT</div>
       <div className="productdescription">{oneProduct&&oneProduct.description}</div>
-      <div className="bottomborder"></div>
     </div>
     </div>
     <div className='related'>

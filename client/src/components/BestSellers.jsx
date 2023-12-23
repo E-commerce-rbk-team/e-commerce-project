@@ -6,6 +6,7 @@ const Arrivals = () => {
   return (
     <div className="imagee-containerss">
       <img src={imageUrl} alt="Image" />
+      
     </div>
   );
 };
