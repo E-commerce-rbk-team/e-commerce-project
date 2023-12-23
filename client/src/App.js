@@ -54,7 +54,7 @@ console.log("userdata",userData);
       <Navbar user={userData} setUserData={setUserData}/>
     <Routes>
       <Route path="/" element={<Home/>} />
-      <Route path="/wishlist" element={<WhishList />} />
+      <Route path="/wishlist" element={<WhishList user={userData}/>} />
       <Route path="/contact" element={<Contact/>} />
       <Route path="/about" element={<Team/>} />
       <Route path="/EditUser" element={<EditUser/>} />
