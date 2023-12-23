@@ -8,6 +8,6 @@ router.get('/cart/:userId', cartController.getAllCart);
 router.delete('/cart/:userId/:cartItemId', cartController.deleteCartItem);
 
 // POST create a new cart item
-router.post('/cart/:userId', cartController.createCart);
+router.post('/cart', cartController.createCart);
 
 module.exports = router;
