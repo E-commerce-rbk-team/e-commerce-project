@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import { Box, IconButton } from '@mui/material';
 import { Favorite } from '@mui/icons-material';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
-
-const WishlistButton = () => {
+import axios from 'axios'
+import { DataContext } from '../context.js'
+const WishlistButton = ({dataUser}) => {
   const [showAlert, setShowAlert] = useState(false);
-
+  const { oneProduct } = useContext(DataContext);
   const handleWishlistClick = () => {
-    setShowAlert(true);
+    console.log("datauss",dataUser);
+   axios.post("http://localhost:3000/api/addwish",{UserId:dataUser.id,ProductId:oneProduct.id})
+   .then((res)=>setShowAlert(true))
+   .catch((err)=>console.log(err))
   };
 
   const handleCloseAlert = () => {

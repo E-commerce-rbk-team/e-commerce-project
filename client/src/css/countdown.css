@@ -12,7 +12,7 @@
    
 #timer-heading{
 position: relative;
-left: -390px;
+left: -650px;
 top: 200px;
 font-family: 'poppins', sans-serif;
 color: red;
@@ -21,7 +21,7 @@ color: red;
 
 #timerrr-heading{
     position: relative;
-    left: -360px;
+    left: -630px;
     top: 200px;
     font-family: 'poppins', sans-serif;
     }
@@ -29,12 +29,12 @@ color: red;
   .timer {
     font-size: 36px;
     padding: 10px 20px;
-    background-color: #ffffff;
+    background-color: transparent;
     border-radius: 5px;
     display: inline-block;
     position: relative;
-    left: -200px;
-    top: 60px;
+    left: -420px;
+    top: 63px;
   }
   
   .square {
@@ -45,7 +45,7 @@ color: red;
     border-radius: 5px;
     margin-right: 10px;
     position: relative;
-    top: 90px;
-    left: 255px;
+    top: 89px;
+    left: 5px;
 
   }

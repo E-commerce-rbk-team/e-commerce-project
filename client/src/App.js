@@ -15,7 +15,7 @@ import Login from './components/Login.jsx';
 import Sign from './components/Sign.jsx';
 import EditUser from './components/EditUser.jsx';
 // import Slider from './components/Slider.jsx';
-
+import ProductDetails from './components/ProductDetails.jsx';
 import AdminDashboard from './components/adminComponents/AdminDashboard.jsx'
 import Products from './components/adminComponents/Products.jsx'
 import UserList from './components/adminComponents/Users.jsx'
@@ -66,6 +66,7 @@ console.log("userdata",userData);
       <Route path="/sellers" element={<SellerList/>} />
       <Route path="/clients" element={<ClientList/>} />
       <Route path="/Sign" element={<Sign setId={setId}/>} />
+      <Route path="/details" element={<ProductDetails user={userData}/>} />
     </Routes>
     <Footer/>
     </div>

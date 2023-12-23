@@ -6,7 +6,7 @@ import '../css/home.css';
 function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    "https://media.discordapp.net/attachments/1186723460072865853/1187446990280327300/images.jpg?ex=6596eb30&is=65847630&hm=1a9ce03659e20a66539ec1f237baaeccf9c63cd3569cbaccf43f9b2c7a0a19f4&=&width=905&height=347",
+    "https://i.ibb.co/q5xmSrs/abb69c62-8b6f-409d-8c16-17ee11e65044.png",
     "https://i.ibb.co/j5xz9n1/ps5.jpg",
     "https://i.ibb.co/wLxgQRL/resize-1703240989234827213spiderman2featured-1.jpg"
   ];  
