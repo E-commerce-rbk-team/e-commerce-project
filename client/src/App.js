@@ -21,8 +21,8 @@ import Products from './components/adminComponents/Products.jsx'
 import UserList from './components/adminComponents/Users.jsx'
 import SellerList from './components/adminComponents/SellerList.jsx'
 import ClientList from './components/adminComponents/ClientList.jsx'
-
-
+import SalesProduct from './components/SalesProduct.jsx';
+import BestSelling from './components/BestSelling.jsx';
 import axios from 'axios';
 import { useRadioGroup } from '@mui/material';
 
@@ -55,7 +55,7 @@ console.log("userdata",userData);
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/wishlist" element={<WhishList />} />
-      <Route path="/contact" element={<Contact/>} />
+      <Route path="/contact" element={<SalesProduct/>} />
       <Route path="/about" element={<Team/>} />
       <Route path="/EditUser" element={<EditUser/>} />
       <Route path="/Login" element={<Login  setId={setId}/>} />

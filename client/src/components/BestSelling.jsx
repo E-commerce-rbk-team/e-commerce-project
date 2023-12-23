@@ -1,21 +1,23 @@
-import React,{useContext} from 'react'
-import '../css/sales.css'
+import React, { useState,useContext } from 'react'
 import { DataContext } from '../context.js'
-function SalesProduct() {
+import '../css/bestselling.css'
+import Rating from './Rating.jsx'
+function BestSelling() {
     const { handleOneProd,products } = useContext(DataContext);
+    const [prodCopie,setCopie]=useState([...products])
   return (
     <div className="allprod">
-    {products.filter((e,i)=>e.sales!==0).map((el, i) => {
+    {prodCopie.sort((a, b) => b.rating - a.rating).map((el, i) => {
            return (
             <div className="product-container" key={i}>
             <div className="product-image">
-              <div className="sales-ticket">-{el.sales}%</div>
               <img src={el.imageUrl && el.imageUrl[0]} alt="" onClick={() => handleOneProd(el.id)} />
               <button className="buy-button">Add To Chart</button>
             </div>
             <div className="product-details">
               <div className="product-name">{el.productName}</div>
-              <div className="product-price">{el.price}DT</div>
+              <div className="product-price">{el.price}DT </div>
+              <Rating/>
             </div>
           </div>
            );
@@ -24,4 +26,4 @@ function SalesProduct() {
   )
 }
 
-export default SalesProduct
+export default BestSelling

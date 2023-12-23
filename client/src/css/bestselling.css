@@ -6,7 +6,7 @@
   
   .product-container {
     width: 270px;
-    height: 322px;
+    height: 450px;
     margin: 10px; 
     overflow: hidden; 
     position: relative;
@@ -50,14 +50,6 @@
   .product-price {
     color: #ff0000;
   }
-  .sales-ticket {
-    position: absolute;
-    background-color: red; /* Set the background color of the sales ticket */
-    color: white; /* Set the text color of the sales ticket */
-    padding: 5px; /* Adjust the padding as needed */
-    border-radius: 5px; /* Add border-radius for rounded corners */
-    font-size: 12px; /* Set the font size of the sales ticket */
-    z-index: 1; /* Ensure the sales ticket is above the image */
-    margin-top: 5px;
-    margin-left: 5px;
+  .rating {
+    color: gold;
   }
