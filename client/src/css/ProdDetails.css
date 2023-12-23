@@ -16,12 +16,17 @@
     width: 170px;
     height: 138px;
     object-fit: cover;
+    position: relative;
+    top: -4300px;
+    left: -80px;
   }
   
   .display-image {
     width: 500px;
-    height: 600px; 
+    height: 500px; 
     /* object-fit: cover; */
+    position: relative;
+    right: 400px;
   }
   .related{
     display: flex;
@@ -36,6 +41,8 @@
   .productname {
     font-weight: bold;
     margin-bottom: 5px;
+    position: relative;
+    left: -350px;
   }
   
   .productrating {
@@ -53,18 +60,23 @@
   .separator {
     margin-left: 5px;
     position: relative;
-    right: -120px;
+    left: -230px;
+    top: -6px;
   }
   
   .productprice {
     font-weight: bold;
     margin-bottom: 5px;
+    position: relative;
+    left: -350px;
   }
   
   .productdescription {
     max-width: 373px;
     overflow-wrap: break-word;
     margin-bottom: 5px;
+    position: relative;
+    left: -350px;
   }
   
   .bottomborder {
