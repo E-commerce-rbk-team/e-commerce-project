@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
-import Rating from './Rating.jsx'; // Import the new RatingComponent
+import Rating from './Rating.jsx'; 
 import '../css/ProdDetails.css';
-import Product from './Product';
+import Product from './Product.jsx';
+import Color from './Color.jsx';
+import SizePicker from './Size.jsx';
+import QuantitySelector from './Quantity.jsx';
+import CartButton from './CartBtn.jsx';
+import WishlistButton from './WishlistBtn.jsx';
+import DeliveryOptions from './DeliveryOptions.jsx';
 
 function ProductDetails() {
   const [hoveredImage, setHoveredImage] = useState(null);
@@ -56,10 +62,18 @@ function ProductDetails() {
     </div>
     <div className='related'>
     <div class="square"></div>
-  <h2 class="jfy">just for you</h2>
+  <h2 class="jfy">Related Items</h2>
   </div>
-    <Product/>
+  <div>
     <Rating/>
+    <Color/>
+    <SizePicker/>
+    <QuantitySelector/>
+    <CartButton/>
+    <WishlistButton/>
+    <DeliveryOptions/>
+    </div>
+    <Product/>
 
     </div>
   );

@@ -6,14 +6,17 @@ import Product from './components/Product.jsx';
 import Home from './components/Home.jsx'
 import WhishList from './components/WhishList.jsx';
 import Cart from "./components/Cart.jsx"
+import EditUser from "./components/EditUser.jsx"
+import Slider from "./components/Slider.jsx"
+
 function App() {
 
     return (
       <BrowserRouter>
     <Routes>
-      <Route path="/" element={<WhishList/>} />
+      <Route path="/" element={<Slider/>} />
       <Route path="/wishlist" element={<Home />} />
-      <Route path="/sign" element={<SignUp />} />
+      <Route path="/sign" element={<Slider />} />
       <Route path="/cart" element={<Cart/>} />
     </Routes>
 </BrowserRouter>
