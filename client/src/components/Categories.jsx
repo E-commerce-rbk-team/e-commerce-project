@@ -8,7 +8,7 @@ function Categories() {
   return (
     <div>
       <div className="sqandtxt">
-        <strong className="jfy">Browse By Category:</strong>
+      <div><img id="cetegories" src="https://i.postimg.cc/MG2XLS1W/Frame-624.png" alt="App" /></div>
       </div>
       <div className="category-flex">
       <IconButton style={{ marginRight: '10px',position:'relative', top: '-97px', left: '1380px', }} >
