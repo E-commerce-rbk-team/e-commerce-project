@@ -1,7 +1,7 @@
 .timer-container {
     text-align: center;
     margin-top: 50px;
-    font-family: Arial, sans-serif;
+    font-family: 'poppins', sans-serif;
   }
   
   .timer-heading {
@@ -12,38 +12,34 @@
    
 #timer-heading{
 position: relative;
-left: -660px;
-top: -40px;
-font-family: 'Roboto', sans-serif;
+left: -650px;
+top: 200px;
+font-family: 'poppins', sans-serif;
 color: red;
 
 }
 
 #timerrr-heading{
     position: relative;
-    left: -660px;
-    top: -40px;
-    font-family: 'Roboto', sans-serif;
+    left: -630px;
+    top: 200px;
+    font-family: 'poppins', sans-serif;
     }
 
   .timer {
     font-size: 36px;
     padding: 10px 20px;
-    background-color: #ffffff;
+    background-color: transparent;
     border-radius: 5px;
     display: inline-block;
     position: relative;
-    left: -410px;
-    top: -190px;
+    left: -420px;
+    top: 168px;
   }
   
-  .square {
-    width: 20px;
-    height: 40px;
-    background-color: #b82d2d; 
-    border: solid transparent;
-    border-radius: 5px;
-    margin-right: 10px;
-    position: relative;
-    top: -162px;
-  }
+#flashsales{
+position: relative;
+top: 250px;
+right: 620px;
+
+}

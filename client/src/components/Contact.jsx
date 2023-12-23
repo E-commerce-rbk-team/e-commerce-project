@@ -19,21 +19,21 @@ const Messsage=(id,obj)=>{
           <div class="placebox-info">
             <div class="place-to-info-box"></div>
             <div class="md">
-              <input type="text" onChange={(event)=>{setName(event.target.value)}} placeholder='Your Name' />
+              <input type="text" onChange={(event)=>{setName(event.target.value)}} placeholder=' Name' />
               
             </div>
           </div>
           <div class="placebox-info">
             <div class="place-to-info-box"></div>
             <div class="md">
-             <input type="Email" onChange={(event)=>{setEmail(event.target.value)}} placeholder='Your Email'/>
+             <input type="Email" onChange={(event)=>{setEmail(event.target.value)}} placeholder=' Email'/>
               
             </div>
           </div>
           <div class="placebox-info">
             <div class="place-to-info-box"></div>
             <div class="md">
-             <input type="number" onChange={(event)=>{setNumbre(event.target.value)}} placeholder='Your Numbre'/>
+             <input type="number" onChange={(event)=>{setNumbre(event.target.value)}} placeholder='Phone Number'/>
            
             </div>
           </div>
@@ -41,7 +41,7 @@ const Messsage=(id,obj)=>{
         <div class="placebox-info3">
           <div class="place-to-info-box"></div>
           <div class="md">
-              <input className='Your-Message' type="text" placeholder='Your message' />
+              <input className='Your-Message' type="text" placeholder=' message' />
           </div>
         </div>
         <div class="button">
@@ -62,13 +62,13 @@ const Messsage=(id,obj)=>{
             />
            
 
-            <div class="view-all-products">Call To Us</div>
+            <div class="view-all-products">Call Us</div>
           </div>
           <div class="we-are-available-247-7-days-parent">
             <div class="we-are-available">
               We are available 24/7, 7 days a week.
             </div>
-            <div class="english">Phone: +8801611112222</div>
+            <div class="english">Phone: 75387555</div>
           </div>
         </div>
         
@@ -83,15 +83,9 @@ const Messsage=(id,obj)=>{
             <div class="fill-out-our">
               Fill out our form and we will contact you within 24 hours.
             </div>
-            <div class="english">Emails: customer@exclusive.com</div>
-            <div class="english">Emails: support@exclusive.com</div>
+            <div class="english">Emails: OmniMarket@Support.com</div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="underline-parent">
-        <img class="underline-icon2" alt="" src="./public/underline@2x.png" />
       </div>
     </div>
   </div>
