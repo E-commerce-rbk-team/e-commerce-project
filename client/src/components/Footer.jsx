@@ -2,6 +2,7 @@ import React from 'react';
 import '../css/footer.css';
 
 const Footer = () => {
+   
  return (
     <footer className="footer">
       <div className="footer-section">
@@ -52,8 +53,78 @@ const Footer = () => {
       <br />
       <br />
       <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      
 
    <div><img id="appStoreeeee" src="https://i.postimg.cc/BntPZGMX/cc6ccb76-df7d-4129-8601-936544988da0.png" alt="App" /></div>
+   <div><img id="ads" src="https://i.ibb.co/yd4cNfv/Frame-740.png" alt="Apps" /></div>
+   <div><img id="Best" src="https://i.ibb.co/PrqStQT/Frame-621.png" alt="Apps" /></div>
 
     </footer>
  );
