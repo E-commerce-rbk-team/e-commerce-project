@@ -71,7 +71,7 @@ function ProductDetails({user}) {
     <Color/>
     <SizePicker/>
     <QuantitySelector/>
-    <CartButton/>
+    <CartButton dataUser={user}/>
     <WishlistButton dataUser={user}/>
     <DeliveryOptions/>
     </div>

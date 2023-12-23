@@ -7,6 +7,7 @@ const DataProvider = ({ children }) => {
     const [oneProduct, setOneproduct] = useState({categories:"electronics"});
     const [products, setProducts] = useState([]);
     const [cartList,setCartList]=useState([])
+    const [quantity,setQuantity]=useState(1)
     useEffect(() => {
         axios.get('http://localhost:3000/api/products')
           .then((response) => {
@@ -24,7 +25,7 @@ const DataProvider = ({ children }) => {
     }).catch((err)=>console.log(err))
     }
     return (
-        <DataContext.Provider value={{ oneProduct, setOneproduct,handleOneProd,products,cartList,setCartList }}>
+        <DataContext.Provider value={{ oneProduct, setOneproduct,handleOneProd,products,cartList,setCartList,quantity,setQuantity }}>
           {children}
         </DataContext.Provider>
       );
