@@ -24,6 +24,7 @@ import ClientList from './components/adminComponents/ClientList.jsx'
 import AllProd from './components/AllProd.jsx';
 import axios from 'axios';
 import { useRadioGroup } from '@mui/material';
+import SalesProduct from './components/SalesProduct.jsx';
 
 function App() {
 const [id,setId]=useState(0)

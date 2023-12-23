@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useContext } from 'react';
 import axios from 'axios';
 import '../css/cart.css';
+import { DataContext } from '../context.js'
 const CartPage = () => {
   const [cart, setCart] = useState([]);
   const [showOrder, setShowOrder] = useState(false);
-
+  const { cartList,quantity } = useContext(DataContext);
   useEffect(() => {
     const userId = 1; // Replace '1' with the actual user ID
     axios.get(`http://localhost:3000/api/cart/${userId}`)
@@ -16,17 +17,17 @@ const CartPage = () => {
         console.error('Error fetching cart items:', error);
       });
   }, []);
-
+console.log("cartlist",cartList);
   const handleQuantityChange = (id, quantity) => {
-    const updatedCart = cart.map((item) =>
+    const updatedCart = cartList.map((item) =>
       item.id === id ? { ...item, quantity } : item
     );
     setCart(updatedCart);
   };
 
   const calculateSubtotal = () => {
-    return cart.reduce((acc, cartItem) => {
-      return acc + cartItem.Product.price * cartItem.quantity;
+    return cartList.reduce((acc, cartItem) => {
+      return acc + cartItem.product.price * cartItem.quantity;
     }, 0);
   };
 
@@ -36,10 +37,6 @@ const CartPage = () => {
 
     return subtotal + shipping;
   };
-
-
-
-  
   return (
     <div>
       <strong>Home / Cart</strong>
@@ -53,25 +50,25 @@ const CartPage = () => {
           </tr>
         </thead>
         <tbody>
-          {cart.map((cartItem) => (
-            <tr key={cartItem.id}>
-              <td>{cartItem.Product.productName}</td>
-              <td>${cartItem.Product.price}</td>
+          {cartList.map((cartItem) => (
+            <tr key={cartItem.product.id}>
+              <td>{cartItem.product.productName}</td>
+              <td>${cartItem.product.price}</td>
               <td>
                 <input
                   type="number"
                   min="0"
                   value={cartItem.quantity}
                   onChange={(e) =>
-                    handleQuantityChange(cartItem.id, parseInt(e.target.value))
+                    handleQuantityChange(cartItem.product.id, parseInt(e.target.value))
                   }
                 />
               </td>
-              <td>${cartItem.Product.price * cartItem.quantity}</td>
+              <td>${cartItem.product.price * cartItem.quantity}</td>
               <td>
                 <img
-                  src={cartItem.Product.imageUrl[0]}
-                  alt={cartItem.Product.productName}
+                  src={cartItem.product.imageUrl[0]}
+                  alt={cartItem.product.productName}
                   style={{ maxWidth: '70px', maxHeight: '70px', position: 'relative', left: '-950px', top: '0px' }}
                 />
               </td>
