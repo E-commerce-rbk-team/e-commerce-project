@@ -3,7 +3,7 @@ import { NavLink} from 'react-router-dom';
 import { IoSearch } from "react-icons/io5";
 import '../css/nav.css'
 import UserIcon from './UserIcon';
-function Head({user}  ) {
+function Head({user,setUserData}  ) {
   return (
     <header>
         <nav className="navbar">
@@ -22,7 +22,7 @@ function Head({user}  ) {
           <NavLink to="/Cart" >
           <img className="navcartt" src="https://static.thenounproject.com/png/1074958-200.png" alt="Cart" />
           </NavLink> 
-          {user? <UserIcon/>:""}
+          {user? <UserIcon setUserData={setUserData}/>:""}
          </div >
         </nav>
       </header>

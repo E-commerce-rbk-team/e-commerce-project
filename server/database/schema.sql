@@ -121,7 +121,7 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 -- Table `ecommerce`.`products`
 -- -----------------------------------------------------
-//products//
+CREATE TABLE IF NOT EXISTS `ecommerce`.`products` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `productName` VARCHAR(255) NOT NULL,
   `rating` FLOAT NULL DEFAULT '0',
@@ -150,7 +150,6 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 -- Table `ecommerce`.`cart`
 -- -----------------------------------------------------
-//cart//
 CREATE TABLE IF NOT EXISTS `ecommerce`.`cart` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `UserId` INT NULL DEFAULT NULL,

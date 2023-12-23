@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
 import '../css/UserIcon.css'
 import { NavLink} from 'react-router-dom';
-function UserIcon() {
+import Logout from './Logout';
+function UserIcon({setUserData}) {
     const [dropdownVisible, setDropdownVisible] = useState(false);
 
     const toggleDropdown = () => {
@@ -18,8 +19,8 @@ function UserIcon() {
             <NavLink to={`/`} className="nav-link1">My Orders</NavLink>
          
             <NavLink to={`/`} className="nav-link1">My Reviews</NavLink>
-          
-            <NavLink to={`/Login`} className="nav-link1">Logout</NavLink>
+           <Logout setUserData={setUserData}/>
+            
         </div>
     </div>
   )

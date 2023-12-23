@@ -46,4 +46,3 @@ const User = require('../database/User.js');
     getWishById,
     createWish
   };
-  
