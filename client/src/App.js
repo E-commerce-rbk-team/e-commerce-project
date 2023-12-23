@@ -59,7 +59,7 @@ console.log("userdata",userData);
       <Route path="/about" element={<Team/>} />
       <Route path="/EditUser" element={<EditUser/>} />
       <Route path="/Login" element={<Login  setId={setId}/>} />
-      <Route path="/cart" element={<Cart/>} />
+      <Route path="/cart" element={<Cart user={userData}/>} />
       <Route path="/Admin" element={<AdminDashboard/>} />
       <Route path="/Products" element={<Products/>} />
       <Route path="/users" element={<UserList/>} />
