@@ -73,6 +73,10 @@
   .product-price {
     color: #007bff;
   }
+  .product-old-price{
+    color: #ff0015;
+    text-decoration: line-through;
+  }
   .sqandtxt {
     display: flex;
     align-items: center;
