@@ -38,10 +38,7 @@ async function getAllCart(req, res) {
 
   async function createCart(req, res) {
     try {
-      const { userId } = req.params;
       const cartData = req.body;
-      cartData.UserId = userId; 
-      
       const newCart = await Cart.create(cartData);
       res.status(201).json(newCart);
     } catch (error) {
