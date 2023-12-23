@@ -1,0 +1,55 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+  }
+  .logo-login img{
+    width: 70px;
+  
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  .nav-search {
+    background-color: rgb(199, 194, 207);
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #53a8b6;
+     margin-right: 150px; 
+    width: 200px;
+    height: 25px;
+    border-radius: 20px;
+  }
+  .nav-search input {
+    background-color: transparent;
+    border:0;
+    outline:none
+  }
+  .nav-links {
+    display: flex;
+  }
+  
+  .nav-link {
+    color: rgb(71, 10, 83);
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .active-link {
+    border-bottom: 2px solid white;
+  }
+  .navcartt{
+  width: 200%;
+  margin-left: 40px;
+
+  }
+
+  .logo{
+    width: 40%;
+height: inherit;
+background: transparent;
+
+  }
+  

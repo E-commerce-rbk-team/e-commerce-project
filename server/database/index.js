@@ -1,20 +1,5 @@
-// const mysql = require('mysql2');
-// const connection = mysql.createConnection({
-//   host     : 'localhost',
-//   user     : 'root',
-//   password : 'root',
-//   database : 'ecommerce'
-// })
-// connection.connect((err) => {
-//   if (err) {
-//     console.error('Error connecting to database:', err)
-//     return
-//   }
-//   console.log('Database connected!')
-// })
-// module.exports = connection
-
 const { Sequelize } = require('sequelize');
+
 
 const sequelize = new Sequelize('ecommerce', 'root', 'root', {
   host: 'localhost',
@@ -28,5 +13,11 @@ sequelize.authenticate()
   .catch((err) => {
     console.error('Unable to connect to the database:', err);
   });
-
+  sequelize.sync()
+  .then(() => {
+    console.log('Database and tables synchronized.');
+  })
+  .catch((error) => {
+    console.error('Error synchronizing the database:', error);
+  });
 module.exports = sequelize;

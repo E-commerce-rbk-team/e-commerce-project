@@ -33,9 +33,7 @@ bower_components/
 .floobit
 .floo
 .flooignore
-webpack.config.js
 _PRESS-RELEASE.md
 _PRESS-RELEASE.md
-package-lock.json
-package.json
-package.json
+
+server/database/index.js

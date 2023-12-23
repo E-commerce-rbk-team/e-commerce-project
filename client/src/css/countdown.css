@@ -1,0 +1,51 @@
+.timer-container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'poppins', sans-serif;
+  }
+  
+  .timer-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+   
+#timer-heading{
+position: relative;
+left: -650px;
+top: 200px;
+font-family: 'poppins', sans-serif;
+color: red;
+
+}
+
+#timerrr-heading{
+    position: relative;
+    left: -630px;
+    top: 200px;
+    font-family: 'poppins', sans-serif;
+    }
+
+  .timer {
+    font-size: 36px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    left: -420px;
+    top: 63px;
+  }
+  
+  .square {
+    width: 20px;
+    height: 30px;
+    background-color: #b82d2d; 
+    border: solid transparent;
+    border-radius: 5px;
+    margin-right: 10px;
+    position: relative;
+    top: 89px;
+    left: 5px;
+
+  }
