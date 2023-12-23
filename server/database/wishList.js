@@ -17,7 +17,7 @@ const Wishlist = sequelize.define('Wishlist', {
       key: 'id',
     },
   },
-  postId: {
+  ProductId: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
