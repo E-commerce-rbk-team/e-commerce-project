@@ -4,6 +4,7 @@ import axios from 'axios';
 import CountdownTimer from './countdown';
 import Categories from './Categories';
 import { DataContext } from '../context.js'
+import BestSelling from "./BestSelling.jsx"
 const Product = () => {
   
   const [showAll, setShowAll] = useState(false);
@@ -15,10 +16,6 @@ const Product = () => {
       <div className="product-timer1">
         <CountdownTimer />
         {!showAll && <Categories />}
-
-        <button class="bn632-hover bn28" onClick={() => setShowAll(!showAll)}>
-          {showAll ? 'Show Flash Sales' : 'View All Products'}
-        </button>
       </div>
       <div className="allprod">
         {products.map((el, i) => {
