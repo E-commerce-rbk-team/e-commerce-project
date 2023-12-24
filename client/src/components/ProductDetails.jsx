@@ -74,7 +74,7 @@ function ProductDetails({user}) {
     <WishlistButton dataUser={user}/>
     <DeliveryOptions/>
     </div>
-    <div className="allprod">
+    <div className="ddddd">
    {products.filter((e,i)=>e.categories[0]===oneProduct.categories[0]).map((el, i) => {
           return (
             <div className="product-container" key={i}>
@@ -83,8 +83,8 @@ function ProductDetails({user}) {
                 <button className="buy-button">Buy Now</button>
               </div>
               <div className="product-details" >
-                <div className="product-name">{el.productName}</div>
-                <div className="product-price">{el.price}DT</div>
+                <div className="product-namessssss">{el.productName}</div>
+                <div className="product-priceeeessssss">{el.price}DT</div>
                 
               </div>
             </div>

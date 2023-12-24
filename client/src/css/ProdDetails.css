@@ -83,10 +83,12 @@
     border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
   }
-  .allprod {
+  .ddddd {
     display: flex;
     justify-content: space-around; 
     flex-wrap: wrap;
+   position: relative;
+   top: 550px;
   }
   
   .product-container {
@@ -96,6 +98,7 @@
     overflow: hidden; 
     position: relative;
     top: -150px;
+    box-sizing: border-box;
   }
   
   .product-image {
@@ -128,10 +131,11 @@
     padding: 10px;
   }
   
-  .product-name {
+  .product-namessssss {
     font-weight: bold;
+    position: relative;
   }
   
-  .product-price {
+  .product-priceeeessssss {
     color: #007bff;
   }

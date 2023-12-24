@@ -17,7 +17,7 @@ function SalesProduct() {
             <div className="product-details">
               <div className="product-name">{el.productName}</div>
               <div className="product-old-price">{(el.price/(1-(el.sales/100))).toFixed(2)}DT</div>
-              <div className="product-price">{el.price}DT</div>
+              <div className="product-price">{(el.price).toFixed(2)}DT</div>
             </div>
           </div>
            );

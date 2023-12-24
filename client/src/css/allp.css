@@ -72,7 +72,7 @@
   .show{
 position: relative;
 top: -1670px;
-right: -230px;
+right: -160px;
 font-family: lato,sans-serif;
 font-weight: bold;
 font-size: 1em;
@@ -92,7 +92,7 @@ border-radius: 20px;
   .showw{
     position: relative;
     top: -1670px;
-    right: -650px;
+    right: -200px;
     font-family: lato,sans-serif;
     font-weight: bold;
     font-size: 1em;
