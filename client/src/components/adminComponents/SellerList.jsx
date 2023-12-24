@@ -8,7 +8,7 @@ const SellerList = () => {
     const fetchSellers = async () => {
       try {
         const response = await axios.get('http://localhost:3000/api/users/getall');
-        const filteredSellers = response.data.filter(user => user.role === 'seller');
+        const filteredSellers = response.data.filter(user => user.role === 'sellers');
         setSellers(filteredSellers);
       } catch (error) {
         console.error('Error fetching sellers:', error);

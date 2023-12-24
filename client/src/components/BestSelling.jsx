@@ -18,8 +18,8 @@ function BestSelling() {
               <button className="buy-button">Add To Cart</button>
             </div>
             <div className="product-details">
-              <div id="product-name">{el.productName}</div>
-              <div className="product-price">{el.price}DT </div>
+              <div id="product-nameeedd">{el.productName}</div>
+              <div className="product-priceeesss">{el.price}DT </div>
               <Rating />
             </div>
           </div>

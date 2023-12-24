@@ -1,12 +1,17 @@
-import React, { useState, useEffect,useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import '../css/cart.css';
-import { DataContext } from '../context.js'
-const CartPage = ({user}) => {
+import { DataContext } from '../context.js';
+
+const CartPage = ({ user }) => {
   const [cart, setCart] = useState([]);
   const [showOrder, setShowOrder] = useState(false);
-  const { cartList,quantity,oneProduct,setCartList } = useContext(DataContext);
-  
+  const { cartList, setCartList } = useContext(DataContext);
+  const [notification, setNotification] = useState(''); // State for the notification message
+
+  const [couponCode, setCouponCode] = useState(''); 
+  const [discount, setDiscount] = useState(0);
+
   const handleQuantityChange = (id, quantity) => {
     const updatedCart = cartList.map((item) =>
       item.id === id ? { ...item, quantity } : item
@@ -20,28 +25,41 @@ const CartPage = ({user}) => {
     }, 0);
   };
 
-  const checkout=()=>{
+  const checkout = () => {
     const axiosRequests = cartList.map((e, i) =>
-    axios.post("http://localhost:3000/api/cart", {
-      UserId: user.id,
-      ProductId: e.product.id,
-      quantity: e.quantity,
-      total: total,
-    })
-  );
-  Promise.all(axiosRequests)
-    .then((responses) => {
-      setCartList([]);
-    })
-    .catch((err) => console.log(err));
-  }
+      axios.post('http://localhost:3000/api/cart', {
+        UserId: user.id,
+        ProductId: e.product.id,
+        quantity: e.quantity,
+        total: calculateTotal(),
+      })
+    );
+    Promise.all(axiosRequests)
+      .then((responses) => {
+        setCartList([]);
+      })
+      .catch((err) => console.log(err));
+  };
+
   const calculateTotal = () => {
     const subtotal = calculateSubtotal();
-    const shipping = 7; // Fixed shipping cost
+    const shipping = 7; 
+    const totalBeforeDiscount = subtotal + shipping;
 
-    return subtotal + shipping;
+    const discountedTotal = totalBeforeDiscount - totalBeforeDiscount * discount;
+
+    return discountedTotal;
   };
-  const [total,setTotal]=useState(calculateTotal())
+
+  const handleCouponApply = () => {
+    if (couponCode === 'RBK20') {
+      setDiscount(0.2);
+      setNotification('Congratulation: You got a 20% discount!'); 
+    } else {
+      setNotification('Invalid coupon code.'); 
+    }
+  };
+
   return (
     <div>
       <strong>Home / Cart</strong>
@@ -87,14 +105,25 @@ const CartPage = ({user}) => {
           <p>Subtotal: ${calculateSubtotal()}</p>
           <p>Shipping: $7</p>
           <p>Total: ${calculateTotal()}</p>
-          <button className='bn14' onClick={()=>checkout()}>Process To CheckOut</button>
+          <button className="bn14" onClick={checkout}>
+            Process To CheckOut
+          </button>
           <div class="placebox-info">
-        <div class="input-container">
-          <input placeholder="Coupon Code" class="input-field" type="text" />
-          <span class="input-highlight"></span>
-        </div>
-        <button class="bn15">Apply Coupon</button>
-      </div>
+            <div class="input-container">
+              <input
+                placeholder="Coupon Code"
+                class="input-field"
+                type="text"
+                value={couponCode}
+                onChange={(e) => setCouponCode(e.target.value)}
+              />
+              <span class="input-highlight"></span>
+            </div>
+            <button class="bn15" onClick={handleCouponApply}>
+              Apply Coupon
+            </button>
+          </div>
+          {notification && <p>{notification}</p>} 
         </div>
       </div>
     </div>
