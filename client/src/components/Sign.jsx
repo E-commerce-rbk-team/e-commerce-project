@@ -42,10 +42,10 @@ function Signup({setId}) {
         if(role=="user"){
           navigate(`/`);
         }
-       else if(role==="seller"){
+        if(role==="seller"){
           navigate(`/seller`);
         }
-        else{
+        if(role==="admin"){
           navigate(`/admin`);
         }
         
