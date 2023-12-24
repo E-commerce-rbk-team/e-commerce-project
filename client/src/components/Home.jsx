@@ -8,7 +8,7 @@ import BestSelling from './BestSelling.jsx';
 import BestSellers from './BestSellers.jsx';
 import Jbl from './Jbl.jsx';
 import Explore from './Explore.jsx';
-
+import SalesProduct from './SalesProduct.jsx';  
 function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [

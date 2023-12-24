@@ -25,9 +25,9 @@ function AllProd() {
 
           <div className="product-container" key={el.id}>
             <div className="product-image">
-              {el.sales && <div className="sales-ticket">-{el.sales}%</div>}
               <img src={el.imageUrl && el.imageUrl[0]} alt="" onClick={() => handleOneProd(el.id)} />
               <button className="buy-button">Add To Cart</button>
+              
             </div>
             </div>
 
