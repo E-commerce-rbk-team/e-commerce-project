@@ -41,7 +41,7 @@ function WhishList({user}) {
         {wish.map((e,i)=>(<div class="product-container">
       <div class="product-image">
         <img src={e.imageUrl[0]} alt="" />
-        <button class="buy-button" onClick={()=>handleAddToChartBtn(loggedId,wish[i])}>Add To Chart</button>
+        <button class="buy-button" onClick={()=>handleAddToChartBtn(loggedId,wish[i])}>Add To Cart</button>
       </div>
       <div class="product-details">
         <div class="product-name">{e.productName}</div>

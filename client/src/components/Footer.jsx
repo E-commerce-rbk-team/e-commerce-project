@@ -66,61 +66,9 @@ const Footer = () => {
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       
 
-   <div><img id="appStoreeeee" src="https://i.postimg.cc/BntPZGMX/cc6ccb76-df7d-4129-8601-936544988da0.png" alt="App" /></div>
+   <div><img id="appStoreeeee" src="https://i.postimg.cc/c1kXk1Kz/Footer.png" alt="App" /></div>
 
     </footer>
  );

@@ -24,7 +24,7 @@
     justify-content: space-around; 
     flex-wrap: wrap;
     position: relative;
-    top: 100px;
+    top: 700px;
   }
   
   .product-container {
@@ -136,4 +136,16 @@
       #e2373f
     );
     box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+  }
+
+  .product-old-price{
+position: relative;
+top: -23px;
+right: -60px;
+color: #000;
+  }
+
+  .product-priceeee{
+    position: relative;
+    color: #DB4444;
   }
