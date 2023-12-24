@@ -75,6 +75,7 @@
     display: flex;
     justify-content: space-around; 
     flex-wrap: wrap;
+   
   }
   
   .product-container {
@@ -84,6 +85,7 @@
     overflow: hidden; 
     position: relative;
     top: -150px;
+    box-sizing: border-box;
   }
   
   .product-image {

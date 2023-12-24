@@ -16,5 +16,6 @@ router.put('/products/:id', ProductController.updateProductById);
 
 // DELETE a product by ID
 router.delete('/products/:id', ProductController.deleteProductById);
-
+//get a produce by userId
+router.get('/producs/user/:id',ProductController.getProductWithUserId)
 module.exports = router;

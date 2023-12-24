@@ -23,6 +23,8 @@
     display: flex;
     justify-content: space-around; 
     flex-wrap: wrap;
+    position: relative;
+    top: 100px;
   }
   
   .product-container {
@@ -31,7 +33,7 @@
     margin: 10px; 
     overflow: hidden; 
     position: relative;
-    top: -150px;
+    top: -250px;
   }
   
   .product-image {
