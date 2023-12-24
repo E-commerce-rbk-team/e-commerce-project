@@ -24,8 +24,15 @@ const DataProvider = ({ children }) => {
         navigate("/details")
     }).catch((err)=>console.log(err))
     }
+    const handleAddToChartBtn=(id,prod)=>{
+      setCartList([...cartList,{
+        UserId:id,
+        product:prod,
+        quantity:1
+      }])
+    }
     return (
-        <DataContext.Provider value={{ oneProduct, setOneproduct,handleOneProd,products,cartList,setCartList,quantity,setQuantity }}>
+        <DataContext.Provider value={{ oneProduct, setOneproduct,handleOneProd,products,cartList,setCartList,quantity,setQuantity,handleAddToChartBtn }}>
           {children}
         </DataContext.Provider>
       );
