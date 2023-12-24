@@ -149,11 +149,13 @@
   justify-content: flex-start;
 }
 .bt{
-  color: aqua;
-  background-color: brown;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
+  border: solid 1px white;
+  border-radius: 6px;
+  height: 30px;
 }
 .bt:hover{
   text-decoration: none;
-  color: blueviolet;
-
+  color: rgb(255, 208, 208);
 }
