@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext.jsx';
 import '../css/sign.css';
+import { CheckBox } from '@mui/icons-material';
 
 
 function Signup({setId}) {
@@ -18,6 +19,7 @@ function Signup({setId}) {
     const username= formData.get('username')
     const  email= formData.get('email')
     const  password= formData.get('password');
+    const  role= formData.get('role');
     console.log("username",username)
     try {
     
@@ -25,19 +27,27 @@ function Signup({setId}) {
         username:username,
         email: email,
         password: password,
+        role:role
       });
      
 
 // const {email,username,token, id} = response.data;
      const {token}=response.data
      console.log("dsrthn",response.data)
-      if (email && username && token) {
+      if (email && username && role && token) {
         setToken(token);
         setId(response.data.id);
         setSuccessMessage('Registration successful!');
         setErrorMessage('');
-
-        navigate(`/`);
+        if(role=="user"){
+          navigate(`/`);
+        }
+       else if(role==="seller"){
+          navigate(`/seller`);
+        }
+        else{
+          navigate(`/admin`);
+        }
         
       } else {
         setSuccessMessage('');
@@ -70,6 +80,28 @@ function Signup({setId}) {
             Password:
             <input type="password" name="password" required className="input1" />
           </label>
+          <label required className="label1">
+          Role:
+          <div>
+            <label>
+              <input
+                type="radio"
+                name="role"
+                value="user"
+              />
+              User
+            </label>
+            <label>
+              <input 
+                type="radio"
+                name="role"
+                value="seller"
+
+              />
+              Seller
+            </label>
+          </div>
+        </label>
           <button type="submit" className="button1">
             Sign Up
           </button>
