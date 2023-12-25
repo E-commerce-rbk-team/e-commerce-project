@@ -26,28 +26,13 @@ function ProductDetails({user}) {
     <div>
     <div className='alldetails'>
       <div className='image-container'>
-        <img
-          src={oneProduct&&oneProduct.imageUrl[0]}
+        {oneProduct.imageUrl.map((e,i)=>(<img
+          src={oneProduct&&oneProduct.imageUrl[i]}
           alt=''
           className='hover-image'
-          onMouseOver={() => handleImageHover(oneProduct&&oneProduct.imageUrl[0])}
+          onMouseOver={() => handleImageHover(oneProduct&&oneProduct.imageUrl[i])}
           onMouseLeave={handleImageLeave}
-        />
-        <img src='https://i.pinimg.com/564x/72/94/5e/72945e47255e96e0056b874a1c72796c.jpg' alt='' className='hover-image'
-          onMouseOver={() => handleImageHover('https://i.pinimg.com/564x/72/94/5e/72945e47255e96e0056b874a1c72796c.jpg')}
-          onMouseLeave={handleImageLeave}
-        />
-        <img src='https://i.pinimg.com/564x/72/94/5e/72945e47255e96e0056b874a1c72796c.jpg' alt='' className='hover-image'
-          onMouseOver={() => handleImageHover('https://i.pinimg.com/564x/72/94/5e/72945e47255e96e0056b874a1c72796c.jpg')}
-          onMouseLeave={handleImageLeave}
-        />
-        <img
-          src='https://i.pinimg.com/736x/8b/8a/26/8b8a26cef978562faa328441b3cf5b80.jpg'
-          alt=''
-          className='hover-image'
-          onMouseOver={() => handleImageHover('https://i.pinimg.com/736x/8b/8a/26/8b8a26cef978562faa328441b3cf5b80.jpg')}
-          onMouseLeave={handleImageLeave}
-        />
+        />))}
       </div>
       <img src={hoveredImage || oneProduct&&oneProduct.imageUrl[0]} alt='' className='display-image' />
       <div className="product-info-container">
@@ -59,7 +44,6 @@ function ProductDetails({user}) {
       </div>
       <div className="productprice">{oneProduct&&oneProduct.price}DT</div>
       <div className="productdescription">{oneProduct&&oneProduct.description}</div>
-      <div className="bottomborder"></div>
     </div>
     </div>
     <div className='related'>
@@ -75,7 +59,7 @@ function ProductDetails({user}) {
     <WishlistButton dataUser={user}/>
     <DeliveryOptions/>
     </div>
-    <div className="allprod">
+    <div className="ddddd">
    {products.filter((e,i)=>e.categories[0]===oneProduct.categories[0]).map((el, i) => {
           return (
             <div className="product-container" key={i}>
@@ -84,8 +68,8 @@ function ProductDetails({user}) {
                 <button className="buy-button">Buy Now</button>
               </div>
               <div className="product-details" >
-                <div className="product-name">{el.productName}</div>
-                <div className="product-price">{el.price}DT</div>
+                <div className="product-namessssss">{el.productName}</div>
+                <div className="product-priceeeessssss">{el.price}DT</div>
                 
               </div>
             </div>

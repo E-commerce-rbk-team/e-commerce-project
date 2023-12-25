@@ -2,7 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Product from './Product';
 import ProductDetails from './ProductDetails.jsx';
 import '../css/home.css';
-
+import Delivery from './Delivery.jsx';
+import Arrivals from './Arrivals.jsx';
+import BestSelling from './BestSelling.jsx';
+import BestSellers from './BestSellers.jsx';
+import Jbl from './Jbl.jsx';
+import Explore from './Explore.jsx';
+import SalesProduct from './SalesProduct.jsx';  
 function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
@@ -49,6 +55,13 @@ function Home() {
           onClick={changeImage} 
         />    </div>
     <Product/>
+    <Delivery/>
+    <Arrivals/>
+    <BestSellers/>
+    <BestSelling/>
+    <Jbl/>
+    <Explore/>
+
     </div>
   )
 }
