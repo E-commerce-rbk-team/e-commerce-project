@@ -1,6 +1,9 @@
 .logout a:before {
     content: "";
+      color: black;
+
   }
 .logout{
   cursor: pointer;
+  color: black;
 }

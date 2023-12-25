@@ -1,6 +1,7 @@
 import React,{useContext} from 'react'
 import { NavLink} from 'react-router-dom';
 import { IoSearch } from "react-icons/io5";
+import Search from "./Search.jsx"
 import '../css/nav.css'
 import UserIcon from './UserIcon';
 import { DataContext } from '../context.js'
@@ -19,8 +20,8 @@ function Head({user,setUserData}  ) {
 
           </div>
           <div className="nav-search">
-          <IoSearch />
-          <input type="search" placeholder='Search  ' />
+          <Search/>
+          
           <NavLink to="/Cart" >
           <img className="navcartt" src="https://static.thenounproject.com/png/1074958-200.png" alt="Cart" />
           <span id="item-count" class="item-count">{cartList.length}</span>

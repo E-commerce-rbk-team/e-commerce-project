@@ -5,7 +5,7 @@ import { DataContext } from '../context.js'
 function WhishList({user}) {
   const [loggedId,setId]=useState(user.id)
   const [wish,setWish]=useState([])
-  const { handleAddToChartBtn } = useContext(DataContext);
+  const { handleAddToChartBtn,products } = useContext(DataContext);
   useEffect(() => {
     axios
       .get(
@@ -33,7 +33,7 @@ function WhishList({user}) {
     <div className="allWish">
     <div >
       <div className="wishAndBtn">
-        <span>Wishlist(4)</span>
+        <span>Wishlist({wish.length})</span>
         <button className='wishbtn'>Move All To Bag</button>
       </div>
       </div>
@@ -44,53 +44,10 @@ function WhishList({user}) {
         <button class="buy-button" onClick={()=>handleAddToChartBtn(loggedId,wish[i])}>Add To Cart</button>
       </div>
       <div class="product-details">
-        <div class="product-name">{e.productName}</div>
-        <div class="product-price">{e.price}</div>
+        <div class="product-namedqdq">{e.productName}</div>
+        <div class="product-priceqdqd">{e.price}</div>
       </div>
     </div>))}
-    {/* <div class="product-container">
-      <div class="product-image">
-        <img src="https://cdn.shopify.com/s/files/1/2695/9506/products/m686gamingmouse_2_1200x1200.png?v=1584694789" alt="" />
-        <button class="buy-button">Buy Now</button>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Product Name 1</div>
-        <div class="product-price">$19.99</div>
-      </div>
-    </div>
-
-    <div class="product-container">
-      <div class="product-image">
-        <img src="https://cdn.shopify.com/s/files/1/2695/9506/products/m686gamingmouse_2_1200x1200.png?v=1584694789" alt="" />
-        <button class="buy-button">Buy Now</button>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Product Name 2</div>
-        <div class="product-price">$19.99</div>
-      </div>
-    </div>
-
-    <div class="product-container">
-      <div class="product-image">
-        <img src="https://cdn.shopify.com/s/files/1/2695/9506/products/m686gamingmouse_2_1200x1200.png?v=1584694789" alt="" />
-        <button class="buy-button">Buy Now</button>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Product Name 3</div>
-        <div class="product-price">$19.99</div>
-      </div>
-    </div>
-
-    <div class="product-container">
-      <div class="product-image">
-        <img src="https://cdn.shopify.com/s/files/1/2695/9506/products/m686gamingmouse_2_1200x1200.png?v=1584694789" alt="" />
-        <button class="buy-button">Buy Now</button>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Product Name 4</div>
-        <div class="product-price">$19.99</div>
-      </div>
-    </div> */}
   </div>
   <div className="wishAndBtn">
   <div class="sqandtxt">
@@ -99,50 +56,19 @@ function WhishList({user}) {
 </div>
         <button className='wishbtn'>see All</button>
       </div>
-      <div class="allprod">
-    <div class="product-container">
-      <div class="product-image">
-        <img src="https://cdn.shopify.com/s/files/1/2695/9506/products/m686gamingmouse_2_1200x1200.png?v=1584694789" alt="" />
-        <button class="buy-button">Buy Now</button>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Product Name 1</div>
-        <div class="product-price">$19.99</div>
-      </div>
-    </div>
-
-    <div class="product-container">
-      <div class="product-image">
-        <img src="https://cdn.shopify.com/s/files/1/2695/9506/products/m686gamingmouse_2_1200x1200.png?v=1584694789" alt="" />
-        <button class="buy-button">Buy Now</button>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Product Name 2</div>
-        <div class="product-price">$19.99</div>
-      </div>
-    </div>
-
-    <div class="product-container">
-      <div class="product-image">
-        <img src="https://cdn.shopify.com/s/files/1/2695/9506/products/m686gamingmouse_2_1200x1200.png?v=1584694789" alt="" />
-        <button class="buy-button">Buy Now</button>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Product Name 3</div>
-        <div class="product-price">$19.99</div>
-      </div>
-    </div>
-
-    <div class="product-container">
-      <div class="product-image">
-        <img src="https://cdn.shopify.com/s/files/1/2695/9506/products/m686gamingmouse_2_1200x1200.png?v=1584694789" alt="" />
-        <button class="buy-button">Buy Now</button>
-      </div>
-      <div class="product-details">
-        <div class="product-name">Product Name 4</div>
-        <div class="product-price">$19.99</div>
-      </div>
-    </div>
+      <div class="allprodddsss">
+        {products.map((e,i)=>(
+          <div class="product-container">
+          <div class="product-image">
+            <img src={e.imageUrl} alt="" />
+            <button class="buy-button">Add To Cart</button>
+          </div>
+          <div class="product-details">
+            <div class="product-namessssss">{e.productName}</div>
+            <div class="product-pricedqdq">{e.price}Dt</div>
+          </div>
+        </div>
+        ))}
   </div>
   </div>
   )

@@ -89,7 +89,7 @@ const CartPage = ({ user }) => {
           {cartList.map((cartItem) => (
             <tr key={cartItem.product.id}>
               <td>{cartItem.product.productName}</td>
-              <td>${cartItem.product.price}</td>
+              <td>{cartItem.product.price} DT</td>
               <td>
                 <input
                   type="number"
@@ -100,7 +100,7 @@ const CartPage = ({ user }) => {
                   }
                 />
               </td>
-              <td>${cartItem.product.price * cartItem.quantity}</td>
+              <td>{cartItem.product.price * cartItem.quantity} DT</td>
               <td>
                 <img
                   src={cartItem.product.imageUrl[0]}
