@@ -35,5 +35,3 @@ bower_components/
 .flooignore
 _PRESS-RELEASE.md
 _PRESS-RELEASE.md
-
-server/database/index.js
