@@ -49,6 +49,7 @@ input[type="number"]:focus {
   margin: 20px;
   top:-230px;
   right: 1000px;
+  
 }
 
 /* Input field */
@@ -125,7 +126,8 @@ left: 1000px;
   width: 30%;
   height: 50%;
   font-family: 'Poppins',sans-serif;
-
+border: 3px solid black;
+border-radius: 10px;
 }
 
 .summary-box p {

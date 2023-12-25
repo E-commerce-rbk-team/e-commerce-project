@@ -1,13 +1,22 @@
 import React, { useState, useContext } from 'react';
 import { DataContext } from '../context.js';
 import '../css/bestselling.css';
-import Rating from './Rating.jsx';
+import Rating from '@mui/material/Rating'; // Import Rating component from Material-UI
 
 function BestSelling() {
   const { handleOneProd, products } = useContext(DataContext);
   const [showAllProducts, setShowAllProducts] = useState(false);
   const initialDisplayLimit = 5;
   const prodCopie = showAllProducts ? [...products] : products.slice(0, initialDisplayLimit);
+
+  const ratingStyle = {
+    fontSize: '15px', 
+    color: '#ffc107', 
+    position :'relative',
+    right: '5px',
+    top: '0px',
+  };
+
   return (
     <div className="allprodds">
       {prodCopie.length > 0 ? (
@@ -20,7 +29,8 @@ function BestSelling() {
             <div className="product-details">
               <div id="product-nameeedd">{el.productName}</div>
               <div className="product-priceeesss">{el.price}DT </div>
-              <Rating />
+              <Rating name={`rating-${i}`} value={el.rating} readOnly style={ratingStyle} /> 
+
             </div>
           </div>
         ))
