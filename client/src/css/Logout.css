@@ -1,6 +1,0 @@
-.logout a:before {
-    content: "";
-  }
-.logout{
-  cursor: pointer;
-}
