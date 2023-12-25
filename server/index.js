@@ -9,7 +9,6 @@ const cartRoutes = require('./routes/cartRoute.js')
 const productRoute = require('./routes/productRoute.js')
 const authController=require('./controllers/authController.js')
 const adminRoute = require('./routes/adminRoute.js')
-const wishRoute=require('./routes/wishRoute.js')
 
 
 app.use(cors())
@@ -19,12 +18,12 @@ app.use(express.static(__dirname + '/../client/dist'))
 
 app.post('/api/register',authController.Register)
 app.post("/api/login",authController.Login)
+app.post("/api/pass",authController.CheckPass)
 app.use('/api', commerceRoutes); 
 app.use('/api', cartRoutes); 
-app.use('/api',userRoutes)
+app.use('/api',userRoutes);
 app.use('/api', productRoute); 
 app.use('/api', adminRoute); 
-app.use('/api', wishRoute);
 
 app.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`)
