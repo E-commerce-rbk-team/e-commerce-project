@@ -1,39 +1,18 @@
-.allWish {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1170px;
-    height: 100vh;
-  }
-  
-  .wishAndBtn {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-top: 20px;
-  }
-  .wishbtn  {
-    background-color: transparent;
-    color: #000; 
-    border: 1px solid #000; 
-    border-radius: 5px; 
-    padding: 10px 15px; 
-    cursor: pointer;
-  }
-  .allprod {
+.allprodds {
     display: flex;
     justify-content: space-around; 
     flex-wrap: wrap;
     position: relative;
-    top: 700px;
+    top: 300px;
   }
   
   .product-container {
     width: 270px;
-    height: 322px;
+    height: 450px;
     margin: 10px; 
     overflow: hidden; 
     position: relative;
-    top: -250px;
+    top: -50px;
   }
   
   .product-image {
@@ -68,34 +47,17 @@
   
   .product-name {
     font-weight: bold;
+    
   }
   
   .product-price {
-    color: #007bff;
+    color: #ff0000;
   }
-  .product-old-price{
-    color: #ff0015;
-    text-decoration: line-through;
-  }
-  .sqandtxt {
-    display: flex;
-    align-items: center;
-  }
-  
-  .square {
-    width: 20px;
-    height: 40px;
-    background-color: #b82d2d; 
-    border: solid transparent;
-    border-radius: 5px;
-    margin-right: 10px; 
-  }
-  
-  .jfy {
-    margin: 0; 
+  .rating {
+    color: gold;
   }
 
-  .bn632-hover {
+  .bn6322-hover {
     width: 200px; 
     height: 55px;
     font-size: 16px;
@@ -111,23 +73,23 @@
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     position: relative;
-    right: -1250px;
-    top: -150px;
+    right: -600px;
+    top: -670px;
   }
   
   
-  .bn632-hover:hover {
+  .bn6322-hover:hover {
     background-position: 100% 0;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
   }
   
-  .bn632-hover:focus {
+  .bn6322-hover:focus {
     outline: none;
   }
   
-  .bn632-hover.bn28 {
+  .bn6322-hover.bn28 {
     background-image: linear-gradient(
       to right,
       #eb3941,
@@ -136,16 +98,6 @@
       #e2373f
     );
     box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
-  }
+  } 
 
-  .product-old-price{
-position: relative;
-top: -23px;
-right: -60px;
-color: #000;
-  }
-
-  .product-priceeee{
-    position: relative;
-    color: #DB4444;
-  }
+  

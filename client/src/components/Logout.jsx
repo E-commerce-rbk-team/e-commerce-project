@@ -1,20 +1,23 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
-
-function Logout() {
-  const history = useHistory();
+import Login from './Login';
+function Logout({setUserData}) {
+  // const history = useHistory();
   const { clearToken } = useAuth();
+  const navigate = useNavigate();
 
   const handleLogout = () => {
-    clearToken(); // this function used to log the user out
-    
-    history.push('/login');// Redirect the user to the login page
+    clearToken(); 
+    setUserData("");
+    navigate(`/Login`);
+    // history.push('/login');
   };
-
   return (
     <div>
-      <button onClick={handleLogout}>Logout</button>
+      <p className="logout warn" onClick={handleLogout}>Logout</p>
+      
     </div>
   );
 }

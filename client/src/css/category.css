@@ -3,23 +3,20 @@
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 20px;
-  top: 500px;
+  top: 600px;
   position: relative;
+  justify-content: space-between;
 }
 .category-flex1{
   border-width:10px;
-  border: solid;
-  border-radius: 10px;
   text-align: center;
-  width: 150px;
-  height: 150px;
-}
-.category-flex1:hover{
-  transform: scale(1.1);
+  width: 220px;
+  height: 100px;
+  margin-right: auto;
 }
 .category-icon{
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
 }
 
 .square {
@@ -30,6 +27,12 @@
   border-radius: 5px;
   margin-right: 10px; }
 
-.jfy {
-  margin: 0; 
+
+
+#cetegories{
+position: relative;
+top: 550px;
+right: -10px;
+
+
 }

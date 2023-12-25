@@ -1,9 +1,11 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useContext} from 'react'
 import '../css/Allprod.css'
 import axios from 'axios'
+import { DataContext } from '../context.js'
 function WhishList({user}) {
   const [loggedId,setId]=useState(user.id)
   const [wish,setWish]=useState([])
+  const { handleAddToChartBtn } = useContext(DataContext);
   useEffect(() => {
     axios
       .get(
@@ -39,7 +41,7 @@ function WhishList({user}) {
         {wish.map((e,i)=>(<div class="product-container">
       <div class="product-image">
         <img src={e.imageUrl[0]} alt="" />
-        <button class="buy-button">Add To Chart</button>
+        <button class="buy-button" onClick={()=>handleAddToChartBtn(loggedId,wish[i])}>Add To Cart</button>
       </div>
       <div class="product-details">
         <div class="product-name">{e.productName}</div>

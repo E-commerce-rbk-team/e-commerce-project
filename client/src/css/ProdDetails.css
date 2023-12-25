@@ -7,7 +7,7 @@
 }
 .image-container {
     display: flex;
-    gap: 16px; /* Adjust the gap as needed */
+    gap: 16px; 
     flex-direction: column;
    
   }
@@ -16,12 +16,17 @@
     width: 170px;
     height: 138px;
     object-fit: cover;
+    position: relative;
+    top: -4300px;
+    left: -80px;
   }
   
   .display-image {
     width: 500px;
-    height: 600px; /* Calculated height to maintain aspect ratio */
-    object-fit: cover;
+    height: 500px; 
+    /* object-fit: cover; */
+    position: relative;
+    right: 400px;
   }
   .related{
     display: flex;
@@ -36,6 +41,8 @@
   .productname {
     font-weight: bold;
     margin-bottom: 5px;
+    position: relative;
+    left: -350px;
   }
   
   .productrating {
@@ -53,21 +60,82 @@
   .separator {
     margin-left: 5px;
     position: relative;
-    right: -120px;
+    left: -230px;
+    top: -6px;
   }
   
   .productprice {
     font-weight: bold;
     margin-bottom: 5px;
+    position: relative;
+    left: -350px;
   }
   
   .productdescription {
     max-width: 373px;
     overflow-wrap: break-word;
     margin-bottom: 5px;
+    position: relative;
+    left: -350px;
   }
   
   .bottomborder {
     border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
+  }
+  .ddddd {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+   position: relative;
+   top: 550px;
+  }
+  
+  .product-container {
+    width: 270px;
+    height: 322px;
+    margin: 10px; 
+    overflow: hidden; 
+    position: relative;
+    top: -150px;
+    box-sizing: border-box;
+  }
+  
+  .product-image {
+    position: relative;
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+  }
+  
+  .buy-button {
+    display: none;
+    
+  }
+  .product-container:hover .buy-button{
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 41px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+   }
+  .product-details {
+    padding: 10px;
+  }
+  
+  .product-namessssss {
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .product-priceeeessssss {
+    color: #007bff;
   }

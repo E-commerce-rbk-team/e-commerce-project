@@ -1,31 +1,14 @@
 const Cart = require('../database/cart.js');
-const Product = require('../database/product.js');
 
-
-async function getProductInfoByPostId(req, res) {
-  try {
-    const { userId } = req.params;
-
-    const cartItems = await Cart.findAll({
-      where: { UserId: userId },
-      include: [
-        {
-          model: Product,
-          attributes: ['id', 'productName', 'price', 'description', 'imageUrl', 'categories', 'size', 'colour', 'sales', 'available']
-        }
-      ]
-    });
-
-    if (!cartItems || cartItems.length === 0) {
-      return res.status(404).json({ error: 'Cart items not found for the user' });
+async function getAllCart(req, res) {
+    try {
+      const { userId } = req.params;
+      const cartItems = await Cart.findAll({ where: { UserId: userId } });
+      res.json(cartItems);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
     }
-
-    res.json(cartItems); // Assuming the association is named Product in the Cart model
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  } 
-}
-
+  }
   
 
   async function deleteCartItem(req, res) {
@@ -55,10 +38,7 @@ async function getProductInfoByPostId(req, res) {
 
   async function createCart(req, res) {
     try {
-      const { userId } = req.params;
       const cartData = req.body;
-      cartData.UserId = userId; 
-      
       const newCart = await Cart.create(cartData);
       res.status(201).json(newCart);
     } catch (error) {
@@ -68,7 +48,7 @@ async function getProductInfoByPostId(req, res) {
   
 
   module.exports = {
-    getProductInfoByPostId,
+    getAllCart,
     deleteCartItem,
     createCart
   };

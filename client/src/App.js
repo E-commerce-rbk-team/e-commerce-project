@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter , Routes, Route} from 'react-router-dom';
+import { BrowserRouter , Routes, Route,useLocation} from 'react-router-dom';
 import ReactDOM from 'react-dom'
 import Product from './components/Product.jsx';
 import Home from './components/Home.jsx'
@@ -15,20 +15,21 @@ import Login from './components/Login.jsx';
 import Sign from './components/Sign.jsx';
 import EditUser from './components/EditUser.jsx';
 // import Slider from './components/Slider.jsx';
-
+import ProductDetails from './components/ProductDetails.jsx';
 import AdminDashboard from './components/adminComponents/AdminDashboard.jsx'
 import Products from './components/adminComponents/Products.jsx'
 import UserList from './components/adminComponents/Users.jsx'
 import SellerList from './components/adminComponents/SellerList.jsx'
 import ClientList from './components/adminComponents/ClientList.jsx'
-
-
+import AllProd from './components/AllProd.jsx';
 import axios from 'axios';
 import { useRadioGroup } from '@mui/material';
+import SalesProduct from './components/SalesProduct.jsx';
 
 function App() {
 const [id,setId]=useState(0)
 const [userData, setUserData] = useState(null);
+const location = useLocation();
 useEffect(() => {
   const fetchUserData = async () => {
     try {
@@ -51,25 +52,28 @@ console.log("userdata",userData);
     return (
     <div>
       <Header/>
-      <Navbar user={userData}/>
+      {location.pathname !== '/admin' && <Navbar user={userData} setUserData={setUserData} />}
     <Routes>
       <Route path="/" element={<Home/>} />
-      <Route path="/wishlist" element={<WhishList  user={userData}/>} />
+      <Route path="/wishlist" element={<WhishList user={userData}/>} />
       <Route path="/contact" element={<Contact/>} />
       <Route path="/about" element={<Team/>} />
       <Route path="/EditUser" element={<EditUser/>} />
       <Route path="/Login" element={<Login  setId={setId}/>} />
-      <Route path="/cart" element={<Cart/>} />
+      <Route path="/cart" element={<Cart user={userData}/>} />
       <Route path="/Admin" element={<AdminDashboard/>} />
       <Route path="/Products" element={<Products/>} />
       <Route path="/users" element={<UserList/>} />
       <Route path="/sellers" element={<SellerList/>} />
       <Route path="/clients" element={<ClientList/>} />
       <Route path="/Sign" element={<Sign setId={setId}/>} />
+      <Route path="/details" element={<ProductDetails user={userData}/>} />
     </Routes>
     <Footer/>
     </div>
+    
     );
   }
+
 
 export default App;

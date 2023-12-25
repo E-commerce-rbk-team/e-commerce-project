@@ -1,9 +1,11 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { NavLink} from 'react-router-dom';
 import { IoSearch } from "react-icons/io5";
 import '../css/nav.css'
 import UserIcon from './UserIcon';
-function Head({user}  ) {
+import { DataContext } from '../context.js'
+function Head({user,setUserData}  ) {
+  const { cartList } = useContext(DataContext);
   return (
     <header>
         <nav className="navbar">
@@ -21,8 +23,9 @@ function Head({user}  ) {
           <input type="search" placeholder='Search  ' />
           <NavLink to="/Cart" >
           <img className="navcartt" src="https://static.thenounproject.com/png/1074958-200.png" alt="Cart" />
+          <span id="item-count" class="item-count">{cartList.length}</span>
           </NavLink> 
-          {user? <UserIcon/>:""}
+          {user? <UserIcon setUserData={setUserData}/>:""}
          </div >
         </nav>
       </header>

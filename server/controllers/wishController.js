@@ -34,7 +34,15 @@ const User = require('../database/User.js');
       res.status(500).json({ error: error.message });
     }
   }
+  async function createWish(req, res) {
+    try {
+      const newWish= await Wishlist.create(req.body);
+      res.status(201).json(newWish);
+    } catch (error) {
+      res.status(400).json({ error: error.message });
+    }
+  }
   module.exports = {
-    getWishById
+    getWishById,
+    createWish
   };
-  

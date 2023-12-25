@@ -149,66 +149,13 @@
   justify-content: flex-start;
 }
 .bt{
-  color: aqua;
-  background-color: #b82d2d;
-  position: relative;
-  top: 30px;
-  font-family: 'poppins', sans-serif;
-
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
+  border: solid 1px white;
+  border-radius: 6px;
+  height: 30px;
 }
 .bt:hover{
   text-decoration: none;
-  color: blueviolet;
-
-}
-
-/* Input container */
-.input-container {
-  position: relative;
-  margin: 20px;
-}
-
-/* Input field */
-.input-field {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-bottom: 2px solid #ccc;
-  outline: none;
-  background-color: transparent;
-}
-
-/* Input label */
-.input-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 16px;
-  color: rgba(204, 204, 204, 0);
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-
-/* Input highlight */
-.input-highlight {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 0;
-  background-color: #007bff;
-  transition: all 0.3s ease;
-}
-
-/* Input field:focus styles */
-.input-field:focus + .input-label {
-  top: -20px;
-  font-size: 12px;
-  color: #007bff;
-}
-
-.input-field:focus + .input-label + .input-highlight {
-  width: 100%;
+  color: rgb(255, 208, 208);
 }

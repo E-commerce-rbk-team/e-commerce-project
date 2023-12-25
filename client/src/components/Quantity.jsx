@@ -1,13 +1,14 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { FormControl, FormLabel, Input, InputAdornment } from '@mui/material';
-
+import { DataContext } from '../context.js'
 const QuantitySelector = () => {
-  const [quantity, setQuantity] = React.useState(1);
-
+  const [quantiti, setQuantiti] = React.useState(1);
+  const { setQuantity } = useContext(DataContext);
   const handleQuantityChange = (event) => {
     const newQuantity = parseInt(event.target.value);
     if (!isNaN(newQuantity) && newQuantity >= 1 && newQuantity <= 10) {
-      setQuantity(newQuantity);
+      setQuantiti(newQuantity);
+      setQuantity(quantiti)
     }
   };
 
@@ -16,7 +17,7 @@ const QuantitySelector = () => {
       <FormLabel component="legend" sx={{ color: 'Black',fontSize: '18px',fontWeight: 'bold', marginBottom: '8px',position:"absolute",top:"-430px",right:"-780px" }}>Select Quantity</FormLabel>
       <Input
         type="number"
-        value={quantity}
+        value={quantiti}
         onChange={handleQuantityChange}
         sx={{ color: 'Black', marginBottom: '8px',position:"absolute",top:"-390px",right:"-740px" }}
         inputProps={{ min: 1, max: 10 }}
