@@ -13,8 +13,8 @@
   }
   
   .hover-image {
-    width: 170px;
-    height: 138px;
+    width: 150px;
+    height: 110px;
     object-fit: cover;
     position: relative;
     top: -4000px;
@@ -24,7 +24,7 @@
   .display-image {
     width: 500px;
     height: 500px; 
-    /* object-fit: cover; */
+    object-fit: cover; 
     position: relative;
     right: 400px;
   }

@@ -1,72 +1,81 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-  }
-  .logo-login img{
-    width: 70px;
-  
-  }
-  
-  .logo {
-    height: 50px;
-  }
-  .nav-search {
-    background-color: rgb(199, 194, 207);
-    display: flex;
-    align-items: center;
-    border: 1.5px solid #53a8b6;
-     margin-right: 150px; 
-    width: 200px;
-    height: 25px;
-    border-radius: 20px;
-  }
-  .nav-search input {
-    background-color: transparent;
-    border:0;
-    outline:none
-  }
-  .nav-links {
-    display: flex;
-  }
-  
-  .nav-link {
-    color: rgb(71, 10, 83);
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  .active-link {
-    border-bottom: 2px solid white;
-  }
-  .navcartt{
-  width: 200%;
-  margin-left: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+.logo-login img{
+  width: 70px;
 
-  }
-  .item-count {
-    position: absolute;
-    top: 70px;
-    left: 1390px;
-    transform: translate(-50%, -50%);
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    padding: 8px;
-    font-size: 10px;
-    height: 10px;
-    width: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  .logo{
-    width: 40%;
+}
+
+.logo {
+  height: 50px;
+}
+.nav-search {
+  background-color: rgb(199, 194, 207);
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #53a8b6;
+   margin-right: 150px; 
+  width: 200px;
+  height: 25px;
+  border-radius: 20px;
+}
+.nav-search input {
+  background-color: transparent;
+  border:0;
+  outline:none;
+  margin-top: 55px;
+}
+.nav-links {
+  display: flex;
+}
+
+.nav-link {
+  color: rgb(71, 10, 83);
+  text-decoration: none;
+  padding: 10px;
+}
+
+.active-link {
+  border-bottom: 2px solid white;
+}
+.navcartt{
+width: 200%;
+margin-left: 40px;
+top: 7px;
+position: relative;
+}
+.item-count {
+  position: absolute;
+  top: 75px;
+  left: 1390px;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: 10px;
+  height: 10px;
+  width: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.logo{
+  width: 40%;
 height: inherit;
 background: transparent;
 
-  }
+}
+
+
+.search-button{
+position: relative;
+right: -160px;
+top: -35px;
   
+}

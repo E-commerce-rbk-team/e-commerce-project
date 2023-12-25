@@ -8,7 +8,7 @@ const circleStyle = {
     marginRight: '10px',
     cursor: 'pointer',
     position:'relative',
-    top: -550,
+    top: -370,
     right: -840,
   };
 
@@ -26,7 +26,7 @@ const ColorPicker = () => {
 
   return (
     <div style={{ display: 'flex', alignItems: 'center' }}>
-<strong style={{ marginRight: '10px', position: 'relative', top: '-580px', right: '-900px', fontFamily: 'Rubik, sans-serif' }}>Colors:</strong>
+<strong style={{ marginRight: '10px', position: 'relative', top: '-400px', right: '-900px', fontFamily: 'Rubik, sans-serif' }}>Colors:</strong>
       <div>
         <button
           onClick={() => handleColorChange('black')}

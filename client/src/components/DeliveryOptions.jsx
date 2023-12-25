@@ -11,7 +11,7 @@ const DeliveryOptions = () => {
         borderRadius: '4px',
         width: '250px',
         position:'relative',
-        top: -420,
+        top: -320,
         right: -900,
       }}
     >

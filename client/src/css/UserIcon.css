@@ -3,10 +3,14 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
+    position: relative;
+    right: 10px;
 }
 .userDropdown img{
     width:50px;
     height: 40px;
+    position: relative;
+    right: -10px;
 }
 .userdropcontent {
     display: none;
@@ -35,4 +39,9 @@
 
 .userDropdown:hover #dropdownContent {
     display: block;
+}
+
+.nav-link1{
+    position: relative;
+    right: 10px;
 }

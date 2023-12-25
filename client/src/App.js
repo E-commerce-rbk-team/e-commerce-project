@@ -24,10 +24,9 @@ import ClientList from './components/adminComponents/ClientList.jsx'
 import AllProd from './components/AllProd.jsx';
 import axios from 'axios';
 import { useRadioGroup } from '@mui/material';
-
+import Orders from './components/Orders.jsx';
 import AddressForm from './components/Checkout.jsx';
-
-
+import SearchRes from './components/SearchRes.jsx';
 import ProductsSeller from './components/sellerComponent/ProductsSeller.jsx'
 
 function App() {
@@ -72,6 +71,8 @@ console.log("userdata",userData);
       <Route path="/clients" element={<ClientList/>} />
       <Route path="/Sign" element={<Sign setId={setId}/>} />
       <Route path="/details" element={<ProductDetails user={userData}/>} />
+      <Route path="/orders" element={<Orders user={userData}/>}/>
+      <Route path="/Search" element={<SearchRes/>} />
 
       <Route
           path="/AddressForm"
