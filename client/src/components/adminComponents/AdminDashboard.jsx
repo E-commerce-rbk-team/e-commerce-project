@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './dashBoard.css'
 import { Link } from 'react-router-dom';
-import Logout from '../Logout';
-
+import { useNavigate } from 'react-router-dom';
 
 const AdminDashboard = () => {
   const [userCount, setUserCount] = useState(0);
   const [sellerCount, setSellerCount] = useState(0);
-
+  const navigate = useNavigate();
   useEffect(() => {
     async function fetchUserCounts() {
       try {
@@ -31,7 +30,7 @@ const AdminDashboard = () => {
         <h1>OmniMarket Admin Panel</h1>
         <ul className="utilities">
           <li className="users"><a href="#">My Account</a></li>
-          <li><a href=""><Logout/></a></li>
+          <li><a onClick={()=> navigate(`/Login`)} href="">Logout</a></li>
         </ul>
       </header>
 

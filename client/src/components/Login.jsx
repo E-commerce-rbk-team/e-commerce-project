@@ -5,7 +5,7 @@ import "../css/sign.css"
 import { useAuth } from './AuthContext.jsx';
 
 
-function Login({setId}) {
+function Login({setId,userData}) {
   const { setToken } = useAuth();
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState('');
@@ -32,7 +32,16 @@ function Login({setId}) {
         setErrorMessage('');
         setLoading(false);
         setId(id)
-        navigate(`/`);
+        if(userData.role=="user"){
+          navigate(`/`);
+        }
+        if(userData.role==="seller"){
+          navigate(`/seller`);
+        }
+        if(userData.role==="admin"){
+          navigate(`/admin`);
+        }
+       
       } else {
         setErrorMessage('Login failed. Please check your credentials.');
         setLoading(false);

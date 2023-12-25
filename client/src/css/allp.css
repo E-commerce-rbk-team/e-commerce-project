@@ -57,8 +57,7 @@
     position: relative;
     top: -800px;
   }
-  .sales-ticket {
-    position: absolute;
+  .sales-ticketssss {
     background-color: red; 
     color: white; 
     padding: 5px; 
@@ -67,12 +66,15 @@
     z-index: 1; 
     margin-top: 5px;
     margin-left: 5px;
+    position: relative;
+    width: 15%;
+    top: -1150px;
   }
 
   .show{
 position: relative;
-top: -1670px;
-right: -230px;
+top: -1725px;
+right: -180px;
 font-family: lato,sans-serif;
 font-weight: bold;
 font-size: 1em;
@@ -91,7 +93,7 @@ border-radius: 20px;
 
   .showw{
     position: relative;
-    top: -1670px;
+    top: -1725px;
     right: -650px;
     font-family: lato,sans-serif;
     font-weight: bold;
