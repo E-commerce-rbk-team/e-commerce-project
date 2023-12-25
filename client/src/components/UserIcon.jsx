@@ -16,7 +16,7 @@ function UserIcon({setUserData}) {
            
             <NavLink to={`/wishlist`} className="nav-link1">WishList</NavLink>
             
-            <NavLink to={`/`} className="nav-link1">My Orders</NavLink>
+            <NavLink to={`/orders`} className="nav-link1">My Orders</NavLink>
          
             <NavLink to={`/`} className="nav-link1">My Reviews</NavLink>
             
