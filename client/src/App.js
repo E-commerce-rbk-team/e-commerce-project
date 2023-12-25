@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter , Routes, Route,useLocation} from 'react-router-dom';
+import { BrowserRouter , Routes, Route} from 'react-router-dom';
 import ReactDOM from 'react-dom'
 import Product from './components/Product.jsx';
 import Home from './components/Home.jsx'
@@ -14,22 +14,30 @@ import Team from './components/team.jsx'
 import Login from './components/Login.jsx';
 import Sign from './components/Sign.jsx';
 import EditUser from './components/EditUser.jsx';
-// import Slider from './components/Slider.jsx';
-import ProductDetails from './components/ProductDetails.jsx';
+import SearchRes from './components/SearchRes.jsx';
+import FilteredProducts from './components/FilteredProducts.jsx';
 import AdminDashboard from './components/adminComponents/AdminDashboard.jsx'
 import Products from './components/adminComponents/Products.jsx'
 import UserList from './components/adminComponents/Users.jsx'
 import SellerList from './components/adminComponents/SellerList.jsx'
 import ClientList from './components/adminComponents/ClientList.jsx'
-import AllProd from './components/AllProd.jsx';
+
+
 import axios from 'axios';
 import { useRadioGroup } from '@mui/material';
+import AddressForm from './components/Checkout.jsx';
+
+
 import ProductsSeller from './components/sellerComponent/ProductsSeller.jsx'
+
 import Orders from './components/Orders.jsx';
+
+
+
+
 function App() {
 const [id,setId]=useState(0)
 const [userData, setUserData] = useState(null);
-const location = useLocation();
 useEffect(() => {
   const fetchUserData = async () => {
     try {
@@ -52,13 +60,13 @@ console.log("userdata",userData);
     return (
     <div>
       <Header/>
-      {location.pathname !== '/admin' && <Navbar user={userData} setUserData={setUserData} />}
+    {location.pathname !== '/admin' && <Navbar user={userData} setUserData={setUserData} />}
     <Routes>
       <Route path="/" element={<Home/>} />
-      <Route path="/wishlist" element={<WhishList user={userData}/>} />
+      <Route path="/wishlist" element={<WhishList />} />
       <Route path="/contact" element={<Contact/>} />
       <Route path="/about" element={<Team/>} />
-      <Route path="/EditUser" element={<EditUser/>} />
+      <Route path="/EditUser" element={<EditUser data={userData}/>} />
       <Route path="/Login" element={<Login userData={userData}  setId={setId}/>} />
       <Route path="/cart" element={<Cart user={userData}/>} />
       <Route path="/Admin" element={<AdminDashboard/>} />
@@ -67,15 +75,19 @@ console.log("userdata",userData);
       <Route path="/sellers" element={<SellerList/>} />
       <Route path="/clients" element={<ClientList/>} />
       <Route path="/Sign" element={<Sign setId={setId}/>} />
+      <Route path="/Search" element={<SearchRes/>} />
+      <Route path="'/filtered-products'" element={<FilteredProducts/>} />
       <Route path="/details" element={<ProductDetails user={userData}/>} />
       <Route path="/orders" element={<Orders user={userData}/>} />
       <Route path="/seller" element={<ProductsSeller id={userData}/>} />
+      <Route
+          path="/AddressForm"
+          element={<AddressForm />}
+        />
     </Routes>
     <Footer/>
     </div>
-    
     );
   }
-
 
 export default App;

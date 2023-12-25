@@ -34,6 +34,8 @@ function AllProd() {
             <div className="product-details">
               <div className="product-name">{el.productName}</div>
               <div className="product-price">{el.price}DT</div>
+              {el.sales && <div className="sales-ticketssss">-{el.sales}%</div>}
+
             </div>
           </div>
         );
