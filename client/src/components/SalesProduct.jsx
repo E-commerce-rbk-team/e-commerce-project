@@ -1,6 +1,7 @@
 import React,{useContext} from 'react'
 import '../css/sales.css'
 import { DataContext } from '../context.js'
+import AllProd from "./AllProd.jsx"
 function SalesProduct() {
     const { handleOneProd,products } = useContext(DataContext);
   return (

@@ -13,7 +13,7 @@ export default function BasicRating() {
         justifyContent: 'center',
         position:'relative',
         top: -670,
-        right: -220,
+        right: -200,
       }}
     >
       <Rating name="read-only" value={value} readOnly max={4} /> 
