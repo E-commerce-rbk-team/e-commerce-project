@@ -7,7 +7,7 @@ const CartPage = ({ user }) => {
   const [cart, setCart] = useState([]);
   const [showOrder, setShowOrder] = useState(false);
   const { cartList, setCartList } = useContext(DataContext);
-  const [notification, setNotification] = useState(''); // State for the notification message
+  const [notification, setNotification] = useState(''); 
 
   const [couponCode, setCouponCode] = useState(''); 
   const [discount, setDiscount] = useState(0);
