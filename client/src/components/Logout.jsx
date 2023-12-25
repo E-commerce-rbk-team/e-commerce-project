@@ -2,7 +2,7 @@ import React from 'react';
 // import { useHistory } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
-import Login from './Login';
+import "../css/Logout.css"
 function Logout({setUserData}) {
   // const history = useHistory();
   const { clearToken } = useAuth();
