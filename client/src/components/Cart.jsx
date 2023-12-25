@@ -32,6 +32,7 @@ const CartPage = ({ user }) => {
     navigate('/AddressForm'); 
   };
 
+
   const checkout = () => {
     const axiosRequests = cartList.map((e, i) =>
       axios.post('http://localhost:3000/api/cart', {
@@ -49,6 +50,10 @@ const CartPage = ({ user }) => {
       .catch((err) => console.log(err));
   };
 
+  const handleBothCheckouts = () => {
+    checkoutt();
+    checkout();
+  };
   const calculateTotal = () => {
     const subtotal = calculateSubtotal();
     const shipping = 7; 
@@ -113,7 +118,7 @@ const CartPage = ({ user }) => {
           <p>Subtotal: {calculateSubtotal()} DT </p>
           <p>Shipping: 7 DT</p>
           <p>Total: {calculateTotal()} DT </p>
-          <button className="bn14" onClick={checkoutt}>
+          <button className="bn14" onClick={handleBothCheckouts}>
           Proceed To CheckOut
           </button>
           <div class="placebox-info">
