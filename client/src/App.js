@@ -30,6 +30,10 @@ import AddressForm from './components/Checkout.jsx';
 
 import ProductsSeller from './components/sellerComponent/ProductsSeller.jsx'
 
+import Orders from './components/Orders.jsx';
+
+
+
 
 function App() {
 const [id,setId]=useState(0)
@@ -56,7 +60,7 @@ console.log("userdata",userData);
     return (
     <div>
       <Header/>
-      <Navbar user={userData}/>
+    {location.pathname !== '/admin' && <Navbar user={userData} setUserData={setUserData} />}
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/wishlist" element={<WhishList />} />
@@ -74,13 +78,12 @@ console.log("userdata",userData);
       <Route path="/Search" element={<SearchRes/>} />
       <Route path="'/filtered-products'" element={<FilteredProducts/>} />
       <Route path="/details" element={<ProductDetails user={userData}/>} />
+      <Route path="/orders" element={<Orders user={userData}/>} />
+      <Route path="/seller" element={<ProductsSeller id={userData}/>} />
       <Route
           path="/AddressForm"
           element={<AddressForm />}
         />
-
-      <Route path="/seller" element={<ProductsSeller id={id}/>} />
-
     </Routes>
     <Footer/>
     </div>
