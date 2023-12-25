@@ -1,0 +1,159 @@
+/* CartPage.css */
+.cart-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'poppins', sans-serif;
+
+}
+
+table {
+  width: 98%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-family: 'poppins', sans-serif;
+
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  height: 60px;
+  font-family: 'poppins', sans-serif;
+  font-weight: bold;
+
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  font-family: 'poppins', sans-serif;
+
+}
+
+
+input[type="number"]:focus {
+  outline: none;
+  font-family: 'poppins', sans-serif;
+
+}
+
+
+/* Input container */
+.input-container {
+  position: relative;
+  margin: 20px;
+  top:-230px;
+  right: 1000px;
+  
+}
+
+/* Input field */
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Input label */
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(204, 204, 204, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Input highlight */
+.input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+/* Input field:focus styles */
+.input-field:focus + .input-label {
+  top: -20px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+.input-field:focus + .input-label + .input-highlight {
+  width: 100%;
+}
+
+
+.bn15 {
+  font-family: 'Poppins',sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  padding: 10px 40px 10px 40px;
+  position: relative;
+  background-color: #b82d2d;
+  right: 730px;
+  top: -285px;
+  border: 3px solid #ffffff;
+  border-radius: 20px;
+  cursor: pointer;
+
+}
+
+.summary-box {
+  padding: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+position: relative;
+left: 1000px;
+  width: 30%;
+  height: 50%;
+  font-family: 'Poppins',sans-serif;
+border: 3px solid black;
+border-radius: 10px;
+}
+
+.summary-box p {
+  font-size: 16px;
+
+}
+
+.summary-box div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+}
+
+
+.bn14 {
+  font-family: 'Poppins',sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: #ffffff;
+  background: #b82d2d;
+  display: inline-block;
+  padding: 10px 40px 10px 40px;
+  position: relative;
+  border-radius: 0px;
+  font-family: 'Poppins',sans-serif;
+cursor: pointer;
+}
