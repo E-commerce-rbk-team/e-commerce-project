@@ -2,12 +2,14 @@ import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import '../css/cart.css';
 import { DataContext } from '../context.js';
+import { useNavigate } from 'react-router-dom';
 
 const CartPage = ({ user }) => {
   const [cart, setCart] = useState([]);
   const [showOrder, setShowOrder] = useState(false);
   const { cartList, setCartList } = useContext(DataContext);
   const [notification, setNotification] = useState(''); 
+  const navigate = useNavigate();
 
   const [couponCode, setCouponCode] = useState(''); 
   const [discount, setDiscount] = useState(0);
@@ -25,6 +27,11 @@ const CartPage = ({ user }) => {
     }, 0);
   };
 
+
+  const checkoutt = () => {
+    navigate('/AddressForm'); 
+  };
+
   const checkout = () => {
     const axiosRequests = cartList.map((e, i) =>
       axios.post('http://localhost:3000/api/cart', {
@@ -32,6 +39,7 @@ const CartPage = ({ user }) => {
         ProductId: e.product.id,
         quantity: e.quantity,
         total: calculateTotal(),
+        
       })
     );
     Promise.all(axiosRequests)
@@ -102,11 +110,11 @@ const CartPage = ({ user }) => {
       <div class="summary-box">
         <div>
           <p>Cart Total</p>
-          <p>Subtotal: ${calculateSubtotal()}</p>
-          <p>Shipping: $7</p>
-          <p>Total: ${calculateTotal()}</p>
-          <button className="bn14" onClick={checkout}>
-            Process To CheckOut
+          <p>Subtotal: {calculateSubtotal()} DT </p>
+          <p>Shipping: 7 DT</p>
+          <p>Total: {calculateTotal()} DT </p>
+          <button className="bn14" onClick={checkoutt}>
+          Proceed To CheckOut
           </button>
           <div class="placebox-info">
             <div class="input-container">
