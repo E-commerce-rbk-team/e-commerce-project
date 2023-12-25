@@ -13,7 +13,7 @@ function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
     "https://i.ibb.co/q5xmSrs/abb69c62-8b6f-409d-8c16-17ee11e65044.png",
-    "https://i.ibb.co/j5xz9n1/ps5.jpg",
+    "https://images2.imgbox.com/2e/05/FIVuJlGH_o.jpg",
     "https://i.ibb.co/wLxgQRL/resize-1703240989234827213spiderman2featured-1.jpg"
   ];  
 
