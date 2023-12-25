@@ -24,8 +24,7 @@ import ClientList from './components/adminComponents/ClientList.jsx'
 import AllProd from './components/AllProd.jsx';
 import axios from 'axios';
 import { useRadioGroup } from '@mui/material';
-import SalesProduct from './components/SalesProduct.jsx';
-
+import ProductsSeller from './components/sellerComponent/ProductsSeller.jsx'
 function App() {
 const [id,setId]=useState(0)
 const [userData, setUserData] = useState(null);
@@ -59,15 +58,16 @@ console.log("userdata",userData);
       <Route path="/contact" element={<Contact/>} />
       <Route path="/about" element={<Team/>} />
       <Route path="/EditUser" element={<EditUser/>} />
-      <Route path="/Login" element={<Login  setId={setId}/>} />
+      <Route path="/Login" element={<Login userData={userData}  setId={setId}/>} />
       <Route path="/cart" element={<Cart user={userData}/>} />
       <Route path="/Admin" element={<AdminDashboard/>} />
-      <Route path="/Products" element={<Products/>} />
+      <Route path="/Products" element={<Products id={id}/>} />
       <Route path="/users" element={<UserList/>} />
       <Route path="/sellers" element={<SellerList/>} />
       <Route path="/clients" element={<ClientList/>} />
       <Route path="/Sign" element={<Sign setId={setId}/>} />
       <Route path="/details" element={<ProductDetails user={userData}/>} />
+      <Route path="/seller" element={<ProductsSeller id={id}/>} />
     </Routes>
     <Footer/>
     </div>

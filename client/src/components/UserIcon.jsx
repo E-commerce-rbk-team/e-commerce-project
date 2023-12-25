@@ -19,7 +19,8 @@ function UserIcon({setUserData}) {
             <NavLink to={`/`} className="nav-link1">My Orders</NavLink>
          
             <NavLink to={`/`} className="nav-link1">My Reviews</NavLink>
-           <Logout setUserData={setUserData}/>
+            
+            <Logout setUserData={setUserData}/>
             
         </div>
     </div>
