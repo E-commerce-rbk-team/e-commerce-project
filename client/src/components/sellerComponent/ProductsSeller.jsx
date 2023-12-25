@@ -7,6 +7,7 @@ const ProductsSeller = ({id}) => {
   const [showAddForm, setShowAddForm] = useState(false);
   const [refresh,setRefresh]=useState(false)
   const [showUpdate,setShowUpdate]=useState(false)
+  const [myId,setId]=useState(id)
   const [newProduct, setNewProduct] = useState({
     productName: "",
     rating: "",
@@ -18,27 +19,16 @@ const ProductsSeller = ({id}) => {
     colour: "",
     sales: "",
     available: "",
-    UserId: id,
+    UserId:myId,
   });
-  const [update, setUpdate] = useState({
-    productName: "",
-    rating: "",
+  const [update, setUpdate] = useState({ 
     price: "",
-    description: "",
-    imageUrl: [],
-    categories: [],
-    size: "", 
-    colour: "",
-    sales: "",
-    available: "",
-    UserId: id,
+    available: ""
   });
-const hundleUpdate=(proId)=>{
-  axios.put(`http://localhost:3000/api/products/${proId}`,{
-    price: "",
-    available: "",
-  }).then((ress)=>{
-    setRefresh(!refresh)
+const hundleUpdate=(event,proId)=>{
+  event.preventDefault();
+  axios.put(`http://localhost:3000/api/products/${proId}`,update).then((ress)=>{
+     setRefresh(!refresh)
   }).catch((err)=>{
     console.error(err)
   })
@@ -46,16 +36,15 @@ const hundleUpdate=(proId)=>{
   
 const setImg =(imageUrl)=>{
   setNewProduct({...newProduct,imageUrl:[...newProduct.imageUrl,imageUrl]});
-  setUpdate({...setUpdate,imageUrl:[...setUpdate.imageUrl,imageUrl]});
 }
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/producs/user/${id}`).then(response=>
-    setProducts(response.data)
+    axios.get(`http://localhost:3000/api/producs/user/${id&&id}`).then(response=>
+    setProducts(response.data.map((e,i)=>({...e,showUpdate:false})))
     ) .catch ((error)=>
         console.error("Error fetching products:", error)
    )
-  }, [id,refresh]);
+  }, [refresh]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -88,8 +77,8 @@ const setImg =(imageUrl)=>{
       console.error("Error adding product:", error);
     }
   };
-   console.log(newProduct);
-  return (
+   console.log("prod",id);
+  return (    
     <div>
       <h1 >Product List</h1>
       <button className= "productList" onClick={() => setShowAddForm(!showAddForm)}>
@@ -176,21 +165,20 @@ const setImg =(imageUrl)=>{
           </tr>
         </thead>
         <tbody className="aff">
-          {products.map((products) => (
-            <tr key={products.id}>
-              <button onClick={()=>{setShowUpdate(!showUpdate)}}>update</button>
-              <td>{products.productName}</td>
-              <td>{products.rating}</td>
-              <td>{products.price}</td>
-              <td>{products.description}</td>
-              <td>{products.sales}</td>
-              <td>{products.available}</td>
-              <td>{products.categories}</td>
-              <td>{products.size}</td>
-              <td>{products.colour}</td>
-              
-              {showUpdate (
-               <form onSubmit={hundleUpdate(products.id)}>
+          {products.map((product) => (
+            <tr key={product.id}>
+              {!product.showUpdate?(<div> 
+              <td>{product.productName}</td>
+              <td>{product.rating}</td>
+              <td>{product.price}</td>
+              <td>{product.description}</td>
+              <td>{product.sales}</td>
+              <td>{product.available}</td>
+              <td>{product.categories}</td>
+              <td>{product.size}</td>
+              <td>{product.colour}</td>
+              <button onClick={()=>{setProducts(products.map((e,i)=>(product.id===e.id ?{...e,showUpdate:!e.showUpdate}:{...e})))}}>update</button></div>): 
+              (<div><form >
                <input
                  type="text"
                  name="price"
@@ -205,9 +193,9 @@ const setImg =(imageUrl)=>{
                  value={update.available}
                  onChange={handleUpdateChange}
                />
-                <button type="submit">Update one</button>
+                <button onClick={(e)=>hundleUpdate(e,product.id)}>Update one</button>
              </form>
-              )}
+              </div>)}
               </tr>
           ))}
         </tbody>
