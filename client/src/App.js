@@ -14,8 +14,8 @@ import Team from './components/team.jsx'
 import Login from './components/Login.jsx';
 import Sign from './components/Sign.jsx';
 import EditUser from './components/EditUser.jsx';
-// import Slider from './components/Slider.jsx';
-
+import SearchRes from './components/SearchRes.jsx';
+import FilteredProducts from './components/FilteredProducts.jsx';
 import AdminDashboard from './components/adminComponents/AdminDashboard.jsx'
 import Products from './components/adminComponents/Products.jsx'
 import UserList from './components/adminComponents/Users.jsx'
@@ -47,17 +47,17 @@ useEffect(() => {
   fetchUserData();
   
 }, [id]); 
-
+console.log("userdata",userData);
     return (
     <div>
       <Header/>
-      <Navbar/>
+      <Navbar user={userData}/>
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/wishlist" element={<WhishList />} />
       <Route path="/contact" element={<Contact/>} />
       <Route path="/about" element={<Team/>} />
-      <Route path="/EditUser" element={<EditUser/>} />
+      <Route path="/EditUser" element={<EditUser data={userData}/>} />
       <Route path="/Login" element={<Login  setId={setId}/>} />
       <Route path="/cart" element={<Cart/>} />
       <Route path="/Admin" element={<AdminDashboard/>} />
@@ -66,6 +66,8 @@ useEffect(() => {
       <Route path="/sellers" element={<SellerList/>} />
       <Route path="/clients" element={<ClientList/>} />
       <Route path="/Sign" element={<Sign setId={setId}/>} />
+      <Route path="/Search" element={<SearchRes/>} />
+      <Route path="'/filtered-products'" element={<FilteredProducts/>} />
     </Routes>
     <Footer/>
     </div>

@@ -1,23 +1,26 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Cloudinary from "./Cloudinary";
 import "./Products.css"
-const ProductList = () => {
+const ProductList = ({id}) => {
   const [products, setProducts] = useState([]);
   const [newProduct, setNewProduct] = useState({
     productName: "",
     rating: "",
     price: "",
     description: "",
-    imageUrl: "",
+    imageUrl: [],
     categories: [],
-    size: "",
+    size: "", 
     colour: "",
     sales: "",
     available: "",
-    UserId: "",
+    UserId: 0,
   });
   const [showAddForm, setShowAddForm] = useState(false);
-
+const setImg =(imageUrl)=>{
+  setNewProduct({...newProduct,imageUrl:[...newProduct.imageUrl,imageUrl]});
+}
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -47,7 +50,7 @@ const ProductList = () => {
         rating: 0,
         price: 0,
         description: "",
-        imageUrl: "",
+        imageUrl: [],
         categories: [],
         size: "",
         colour: "",
@@ -60,7 +63,7 @@ const ProductList = () => {
       console.error("Error adding product:", error);
     }
   };
-
+   console.log(newProduct);
   return (
     <div>
       <h1 >Product List</h1>
@@ -141,13 +144,14 @@ const ProductList = () => {
           value={newProduct.colour}
           onChange={handleInputChange}
         />
-        <input
-          type="text"
+          <input
+          type="number"
           name="UserId"
-          placeholder="Product UserId"
+          placeholder="User Id"
           value={newProduct.UserId}
           onChange={handleInputChange}
         />
+         <Cloudinary setImg={setImg}/>
           <button type="submit">Submit</button>
       </form>
   )}
@@ -167,7 +171,7 @@ const ProductList = () => {
             <th>User ID</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="aff">
           {products.map((products) => (
             <tr key={products.id}>
               <td>{products.id}</td>

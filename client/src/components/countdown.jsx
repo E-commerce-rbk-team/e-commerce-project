@@ -24,9 +24,8 @@ const CountdownTimer = () => {
   return (
     
     <div className="timer-container">
-      <h1 id="timer-heading">Today's</h1>
-      <h1 id="timerrr-heading">Flash Sales</h1>
-  <div class="square"></div>
+      <div><img id="flashsales" src="https://i.postimg.cc/ZRqm77sb/Frame-626.png" alt="App" /></div>
+
 
       <p className="timer"> {formatTime(timeRemaining)}</p>
     </div>

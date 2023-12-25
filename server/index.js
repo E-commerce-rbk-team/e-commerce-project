@@ -18,9 +18,10 @@ app.use(express.static(__dirname + '/../client/dist'))
 
 app.post('/api/register',authController.Register)
 app.post("/api/login",authController.Login)
+app.post("/api/pass",authController.CheckPass)
 app.use('/api', commerceRoutes); 
 app.use('/api', cartRoutes); 
-app.use('/api',userRoutes)
+app.use('/api',userRoutes);
 app.use('/api', productRoute); 
 app.use('/api', adminRoute); 
 

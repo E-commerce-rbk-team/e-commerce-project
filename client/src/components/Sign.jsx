@@ -8,6 +8,7 @@ import '../css/sign.css';
 function Signup({setId}) {
   const { setToken } = useAuth();
   const navigate = useNavigate();
+
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -26,7 +27,8 @@ function Signup({setId}) {
         password: password,
       });
      
-      // const {email,username,token, id} = response.data;
+
+// const {email,username,token, id} = response.data;
      const {token}=response.data
      console.log("dsrthn",response.data)
       if (email && username && token) {
@@ -35,7 +37,7 @@ function Signup({setId}) {
         setSuccessMessage('Registration successful!');
         setErrorMessage('');
 
-        navigate(`/`); 
+        navigate(`/`);
         
       } else {
         setSuccessMessage('');

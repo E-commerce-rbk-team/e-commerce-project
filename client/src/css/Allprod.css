@@ -23,6 +23,8 @@
     display: flex;
     justify-content: space-around; 
     flex-wrap: wrap;
+    position: relative;
+    top: 700px;
   }
   
   .product-container {
@@ -31,7 +33,7 @@
     margin: 10px; 
     overflow: hidden; 
     position: relative;
-    top: -150px;
+    top: -250px;
   }
   
   .product-image {
@@ -71,6 +73,10 @@
   .product-price {
     color: #007bff;
   }
+  .product-old-price{
+    color: #ff0015;
+    text-decoration: line-through;
+  }
   .sqandtxt {
     display: flex;
     align-items: center;
@@ -106,7 +112,7 @@
     transition: all 0.4s ease-in-out;
     position: relative;
     right: -1250px;
-    top: -270px;
+    top: -150px;
   }
   
   
@@ -130,4 +136,16 @@
       #e2373f
     );
     box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+  }
+
+  .product-old-price{
+position: relative;
+top: -23px;
+right: -60px;
+color: #000;
+  }
+
+  .product-priceeee{
+    position: relative;
+    color: #DB4444;
   }
