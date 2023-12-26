@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { createUser} = require('./UserController.js');
 const Users=require('../database/User.js')
-const UserController = require('./UserController.js')
+
 
 const generateToken = (id, username) => {
   const expiresIn = 60 * 60 * 48;//2days
@@ -51,34 +51,8 @@ const Login = async(req, res) => {
     }
     catch (error) {res.status(500).json(error)}
 };
-const CheckPass = async(req, res) => {
-  const{email,password}=req.body;
-  try {
-       const result= await Users.findOne({ where :{email:email}})
-       if(result ===null) res.send("user not found")
-       else {
-        const verif=result.dataValues.password
-        const passwordMatch = await bcrypt.compare(password,verif)
-        if(passwordMatch){
-           const token=generateToken(result.dataValues.id,result.dataValues.username)  
-           result.dataValues.token=token
-          res.send(true)
-        }
-        else{
-          res.send(false)
-        }
-        
-    }
-  
-  }
-  catch (error) {res.status(500).json(error)}
-};
-
-
 
 module.exports = {
   Register,
   Login,
-  CheckPass,
-  
 };

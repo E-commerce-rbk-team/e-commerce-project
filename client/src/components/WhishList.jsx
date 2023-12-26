@@ -33,7 +33,7 @@ function WhishList({user}) {
     <div className="allWish">
     <div >
       <div className="wishAndBtn">
-        <span>Wishlist(4)</span>
+        <span>Wishlist({wish.length})</span>
         <button className='wishbtn'>Move All To Bag</button>
       </div>
       </div>
@@ -56,7 +56,7 @@ function WhishList({user}) {
 </div>
         <button className='wishbtn'>see All</button>
       </div>
-      <div class="allprod">
+      <div class="allprodddsss">
         {products.map((e,i)=>(
           <div class="product-container">
           <div class="product-image">

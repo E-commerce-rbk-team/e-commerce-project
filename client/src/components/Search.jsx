@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { IoSearch } from 'react-icons/io5';
 import { NavLink, useNavigate } from 'react-router-dom';
-import SearchRes from './SearchRes';
-
+import '../css/nav.css';
 function Search() {
   const [search, setSearch] = useState('');
   const navigate = useNavigate();
@@ -15,7 +14,7 @@ function Search() {
   return (
     <div>
       <input
-        type="search"
+        type="text"
         className="search-input"
         placeholder="Search..."
         value={search}
@@ -23,9 +22,9 @@ function Search() {
           setSearch(e.target.value);
         }}
       />
-      <button type="submit" className="search-button" onClick={handleSearch}>
-        <IoSearch />
-      </button>
+      <p type="submit" className="search-button" onClick={handleSearch}>
+      <IoSearch />
+      </p>
     </div>
   );
 }

@@ -149,3 +149,13 @@ color: #000;
     position: relative;
     color: #DB4444;
   }
+
+  .allprodddsss{
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    position: relative;
+    top: 700px;
+  }

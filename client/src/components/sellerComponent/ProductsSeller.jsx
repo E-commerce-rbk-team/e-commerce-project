@@ -7,7 +7,7 @@ const ProductsSeller = ({id}) => {
   const [showAddForm, setShowAddForm] = useState(false);
   const [refresh,setRefresh]=useState(false)
   const [showUpdate,setShowUpdate]=useState(false)
-  const [myId,setId]=useState(id.id)
+  const [myId,setId]=useState(id)
   const [newProduct, setNewProduct] = useState({
     productName: "",
     rating: "",
@@ -39,7 +39,7 @@ const setImg =(imageUrl)=>{
 }
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/producs/user/${id.id&&id.id}`).then(response=>
+    axios.get(`http://localhost:3000/api/producs/user/${id&&id}`).then(response=>
     setProducts(response.data.map((e,i)=>({...e,showUpdate:false})))
     ) .catch ((error)=>
         console.error("Error fetching products:", error)
@@ -69,7 +69,7 @@ const setImg =(imageUrl)=>{
         colour: "",
         sales: 0,
         available: "In Stock",
-        UserId: id.id,
+        UserId: id,
       });
       setShowAddForm(false);
       setRefresh(!refresh)
@@ -77,7 +77,7 @@ const setImg =(imageUrl)=>{
       console.error("Error adding product:", error);
     }
   };
-   console.log("prod",newProduct);
+   console.log("prod",id);
   return (    
     <div>
       <h1 >Product List</h1>

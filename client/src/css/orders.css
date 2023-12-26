@@ -1,0 +1,46 @@
+/* styles.css or your preferred CSS file */
+
+.orders {
+    max-width: 800px; /* Adjust the width as needed */
+    margin: auto;
+    text-align: center;
+  }
+  
+  .orders h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .orderstable {
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .orderstable span {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+    background-color: #ff6767;
+    color: rgb(255, 255, 255);
+  }
+  
+  .orderedproduct {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .orderedproduct span {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+  

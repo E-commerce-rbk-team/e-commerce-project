@@ -28,7 +28,7 @@ const WishlistButton = ({dataUser}) => {
           borderRadius: '10%',
           padding: '1px',
           position: 'relative',
-          top: -395,
+          top: -305,
           right: -800,
           contentAlign: 'center',
           '&:hover': {

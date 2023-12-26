@@ -33,12 +33,12 @@ function SearchRes() {
             <div className="bigcontainer" key={i}>
               <div className="product-container">
                 <div className="product-image">
-                  <img src={el.imageUrl[0]} alt="" />
+                  <img id = "imagep"src={el.imageUrl[0]} alt="" />
                   <button className="buy-button">Buy Now</button>
                 </div>
-                <div className="product-details">
-                  <div className="product-name">{el.productName}</div>
-                  <div className="product-price">{el.price}DT</div>
+                <div className="product-detailsssssssss">
+                  <div className="product-nameeeesss">{el.productName}</div>
+                  <div className="product-pricessssssssss">{el.price}DT</div>
                 </div>
               </div>
             </div>
@@ -51,4 +51,3 @@ function SearchRes() {
 }
 
 export default SearchRes;
-

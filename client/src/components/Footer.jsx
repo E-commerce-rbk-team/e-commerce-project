@@ -26,9 +26,6 @@ const Footer = () => {
    <br />
    <br />
    <br />
-
-      
-
    <div><img id="appStoreeeee" src="https://i.postimg.cc/c1kXk1Kz/Footer.png" alt="App" /></div>
 
     </footer>

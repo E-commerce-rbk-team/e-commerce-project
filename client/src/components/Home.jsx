@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; 
 import Product from './Product';
-import FilteredProducts from './FilteredProducts'; 
+import ProductDetails from './ProductDetails.jsx';
 import '../css/home.css';
-import axios from 'axios';
-function Home() {
-  const [products, setProducts] = useState([]);
+import Delivery from './Delivery.jsx';
+import Arrivals from './Arrivals.jsx';
+import BestSelling from './BestSelling.jsx';
+import BestSellers from './BestSellers.jsx';
+import Jbl from './Jbl.jsx';
+import Explore from './Explore.jsx';
+import SalesProduct from './SalesProduct.jsx';  
+function Home({userdata}) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
     "https://i.ibb.co/q5xmSrs/abb69c62-8b6f-409d-8c16-17ee11e65044.png",
@@ -22,31 +26,7 @@ function Home() {
     return () => clearInterval(interval); 
   }, []);
 
-  useEffect(() => {
-    axios.get('http://localhost:3000/api/products')
-      .then((response) => {
-        setProducts(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []); 
-
-  const filt = (text) => {
-
-    const filteredProducts = products.filter((el) => {
-      return (
-        el.categories[0].toUpperCase().includes(text.toUpperCase()) ||
-        el.categories[1].toUpperCase().includes(text.toUpperCase()) ||
-        el.productName.toUpperCase().includes(text.toUpperCase())
-      );
-    });
-
-    return <Link to={'/filtered-products'}><FilteredProducts products={filteredProducts} /></Link>;
-  };
-
   
-
   
   return (
 
@@ -54,19 +34,19 @@ function Home() {
    <div>
   <div className='catandimg'> <div className="Allcategory">
   <div className="div">
-  <div className='text-wrapper-2'onClick={()=>{return filt("woman")}}>Woman's Fashion &gt;</div>
+  <div className='text-wrapper-2'>Woman's Fashion &gt;</div>
       
   </div>
   <div className="div-2"> 
-  <div className='text-wrapper-2'onClick={()=>{return filt("men")}}>Men's Fashion &gt;</div>
+  <div className='text-wrapper-2'>Men's Fashion &gt;</div>
   </div>
-  <div className="text-wrapper-2" onClick={()=>{return filt("electronics")}}>Electronics-</div>
-  <div className="text-wrapper-2"onClick={()=>{return filt("home")}}>Home &amp; Lifestyle</div>
-  <div className="text-wrapper-2" onClick={()=>{return filt("medecine")}}>Medicine</div>
-  <div className="text-wrapper-2" onClick={()=>{return filt("sports")}}>Sports &amp; Outdoor</div>
-  <div className="text-wrapper-2" onClick={()=>{return filt("toys")}}>Baby’s &amp; Toys</div>
-  <div className="text-wrapper-2" onClick={()=>{return filt("groceries")}}>Groceries &amp; Pets</div>
-  <div className="text-wrapper-2" onClick={()=>{return filt("health")}}>Health &amp; Beauty</div>
+  <div className="text-wrapper-2">Electronics-</div>
+  <div className="text-wrapper-2">Home &amp; Lifestyle</div>
+  <div className="text-wrapper-2">Medicine</div>
+  <div className="text-wrapper-2">Sports &amp; Outdoor</div>
+  <div className="text-wrapper-2">Baby’s &amp; Toys</div>
+  <div className="text-wrapper-2">Groceries &amp; Pets</div>
+  <div className="text-wrapper-2">Health &amp; Beauty</div>
    </div>
    <img
           className='ad1img'
@@ -74,7 +54,14 @@ function Home() {
           alt=''
           onClick={changeImage} 
         />    </div>
-    <Product/>
+    <Product user={userdata}/>
+    <Delivery/>
+    <Arrivals/>
+    <BestSellers/>
+    <BestSelling/>
+    <Jbl/>
+    <Explore/>
+
     </div>
   )
 }

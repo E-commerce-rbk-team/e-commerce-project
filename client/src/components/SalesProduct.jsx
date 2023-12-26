@@ -3,7 +3,7 @@ import '../css/sales.css'
 import { DataContext } from '../context.js'
 import AllProd from "./AllProd.jsx"
 function SalesProduct() {
-    const { handleOneProd,products } = useContext(DataContext);
+    const { handleOneProd,products,handleAddToChartBtn } = useContext(DataContext);
   return (
     <div className="allprod">
     {products.filter((e,i)=>e.sales!==0).map((el, i) => {
@@ -12,7 +12,7 @@ function SalesProduct() {
             <div className="product-image">
               <div className="sales-ticket">-{el.sales}%</div>
               <img src={el.imageUrl && el.imageUrl[0]} alt="" onClick={() => handleOneProd(el.id)} />
-              <button className="buy-button">Add To Chart</button>
+              <button className="buy-button" onClick={()=>handleAddToChartBtn()}>Add To Chart</button>
             </div>
             <div className="product-details">
               <div className="product-name">{el.productName}</div>

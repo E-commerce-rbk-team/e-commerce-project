@@ -1,12 +1,16 @@
 .userDropdown {
-    margin-right: 30px;
+    margin-left: 80px;
     position: relative;
     display: inline-block;
+    cursor: pointer;
+    position: relative;
+    right: 10px;
 }
 .userDropdown img{
     width:50px;
     height: 40px;
-    margin-top: 0px;
+    position: relative;
+    right: -10px;
 }
 .userdropcontent {
     display: none;
@@ -16,6 +20,8 @@
     z-index: 1;
     width: 200px;
     right: 0;
+    cursor: pointer;
+
 }
 .userdropcontent.visible {
     display: block;
@@ -33,4 +39,9 @@
 
 .userDropdown:hover #dropdownContent {
     display: block;
+}
+
+.nav-link1{
+    position: relative;
+    right: 10px;
 }

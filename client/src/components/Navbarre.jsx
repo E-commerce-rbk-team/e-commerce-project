@@ -1,10 +1,12 @@
-import React,{useState} from 'react'
+import React,{useContext} from 'react'
 import { NavLink} from 'react-router-dom';
+import { IoSearch } from "react-icons/io5";
 import Search from "./Search.jsx"
 import '../css/nav.css'
 import UserIcon from './UserIcon';
-function Head({user}  ) 
-{
+import { DataContext } from '../context.js'
+function Head({user,setUserData}  ) {
+  const { cartList } = useContext(DataContext);
   return (
     <header>
         <nav className="navbar">
@@ -13,20 +15,22 @@ function Head({user}  )
             <NavLink to={`/`} className="nav-link">Home</NavLink>
             <NavLink to={'/Contact'} className="nav-link">Contact</NavLink>
             <NavLink to={'/About'} className="nav-link">About</NavLink>
-            {!user && <NavLink to={'/Login'} className="nav-link">Login</NavLink>}
+            <NavLink to={'/Login'} className="nav-link">Login</NavLink>
             <NavLink to={'/Sign'} className="nav-link"></NavLink>
 
           </div>
-          <div className="search-container">
           <div className="nav-search">
-            <Search/></div></div >
+          <Search/>
+          
           <NavLink to="/Cart" >
           <img className="navcartt" src="https://static.thenounproject.com/png/1074958-200.png" alt="Cart" />
+          <span id="item-count" class="item-count">{cartList.length}</span>
           </NavLink> 
-          {user? <UserIcon/>:""}
-         
+          {user? <UserIcon setUserData={setUserData}/>:""}
+         </div >
         </nav>
       </header>
   )
 }
+
 export default Head

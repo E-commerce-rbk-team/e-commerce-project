@@ -6,7 +6,7 @@ function Orders({user}) {
     const { products} = useContext(DataContext);
     const [myCart,setCart]=useState([])
     useEffect(() => {
-        axios.get(`http://localhost:3000/api//cart/${user.id}`)
+        axios.get(`http://localhost:3000/api/cart/${user.id}`)
           .then((response) => {
             setCart(response.data);
           })
@@ -14,6 +14,7 @@ function Orders({user}) {
             console.error(error);
           });
       }, []);
+      console.log("cart",myCart);
   return (
     <div className='orders'>
         <h1>your orders</h1>
@@ -24,10 +25,10 @@ function Orders({user}) {
             <span>created-at</span>
         </div>
             {myCart.map((e,i)=>( <div className='orderedproduct'>
-            <span>{}</span>
-            <span>500</span>
-            <span>4</span>
-            <span>date...</span>  
+            <span>{products.filter((el,i)=>el.id===e.ProductId)[0].productName}</span>
+            <span>{e.total}</span>
+            <span>{e.quantity}</span>
+            <span>{e.createdAt}</span>  
             </div>))}
     </div>
   )

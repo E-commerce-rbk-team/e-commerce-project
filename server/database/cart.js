@@ -38,6 +38,6 @@ const Cart = sequelize.define('Cart', {
 });
 
 Cart.belongsTo(User, { foreignKey: 'UserId' });
-Cart.belongsTo(Product, { foreignKey: 'postId' });
+Cart.belongsTo(Product, { foreignKey: 'ProductId' });
 
 module.exports = Cart;

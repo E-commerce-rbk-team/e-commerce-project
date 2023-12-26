@@ -5,10 +5,10 @@ import CountdownTimer from './countdown';
 import Categories from './Categories';
 import { DataContext } from '../context.js'
 import BestSelling from "./BestSelling.jsx"
-const Product = () => {
+const Product = ({user}) => {
   
   const [showAll, setShowAll] = useState(false);
-  const {handleOneProd,products } = useContext(DataContext);
+  const {handleOneProd,products,handleAddToChartBtn } = useContext(DataContext);
  
 
   return (
@@ -27,7 +27,7 @@ const Product = () => {
               <div className="product-image" >
               {el.sales && <div className="sales-ticket">-{el.sales}%</div>}
                 <img src={el.imageUrl[0]} alt="" onClick={()=>handleOneProd(el.id)} />
-                <button className="buy-button">Buy Now</button>
+                <button className="buy-button" onClick={()=>handleAddToChartBtn(user.id,el)}>Add To Chart</button>
               </div>
               <div className="product-details" >
                 <div className="product-nameee">{el.productName}</div>

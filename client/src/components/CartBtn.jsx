@@ -32,7 +32,7 @@ const AddToCartButton = ({dataUser}) => {
           backgroundColor: '#DB4444',
           color: '#fff',
           position:'relative',
-          top: -395,
+          top: -305,
           right: -780,
           '&:hover': {
             backgroundColor: '#DB4444',
