@@ -12,7 +12,7 @@ import { DataContext } from '../context.js'
 
 function ProductDetails({user}) {
   const [hoveredImage, setHoveredImage] = useState(null);
-  const { products,oneProduct,handleOneProd } = useContext(DataContext);
+  const { products,oneProduct,handleOneProd,handleAddToChartBtn } = useContext(DataContext);
   const handleImageHover = (imageSrc) => {
     setHoveredImage(imageSrc);
   };
@@ -20,8 +20,6 @@ function ProductDetails({user}) {
   const handleImageLeave = () => {
     setHoveredImage(null);
   };
-
- console.log("usss",user);
   return (
     <div>
     <div className='alldetails'>
@@ -67,7 +65,7 @@ function ProductDetails({user}) {
             <div className="product-container" key={i}>
               <div className="product-image" >
                 <img src={el.imageUrl&&el.imageUrl[0]} alt="" onClick={()=>handleOneProd(el.id)} />
-                <button className="buy-button">Buy Now</button>
+                <button className="buy-button" onClick={()=>handleAddToChartBtn(user.id,el)}>Add To Chart</button>
               </div>
               <div className="product-details" >
                 <div className="product-namessssss">{el.productName}</div>

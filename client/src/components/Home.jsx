@@ -9,11 +9,15 @@ import BestSellers from './BestSellers.jsx';
 import Jbl from './Jbl.jsx';
 import Explore from './Explore.jsx';
 import SalesProduct from './SalesProduct.jsx';  
+
+function Home({userdata}) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import "../css/SlideShow.css";
 
-function Home() {
+
   const images = [
     "https://images2.imgbox.com/60/fd/ItaLWild_o.png",
       "https://cdn.neowin.com/news/images/uploaded/2023/10/1697743744_xbox-power-your-dreams.jpg",
@@ -63,8 +67,15 @@ function Home() {
   <div className="text-wrapper-2">Health &amp; Beauty</div>
   
    </div>
-       </div>
-    <Product/>
+
+   <img
+          className='ad1img'
+          src={images[currentImageIndex]}
+          alt=''
+          onClick={changeImage} 
+        />    </div>
+    <Product user={userdata}/>
+
     <Delivery/>
     <Arrivals/>
     <BestSellers/>

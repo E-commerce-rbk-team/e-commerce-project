@@ -57,7 +57,7 @@ console.log("userdata",userData);
       <Header/>
       {location.pathname !== '/admin' && <Navbar user={userData} setUserData={setUserData} />}
     <Routes>
-      <Route path="/" element={<Home/>} />
+      <Route path="/" element={<Home userdata={userData}/>} />
       <Route path="/wishlist" element={<WhishList user={userData}/>} />
       <Route path="/contact" element={<Contact/>} />
       <Route path="/about" element={<Team/>} />
