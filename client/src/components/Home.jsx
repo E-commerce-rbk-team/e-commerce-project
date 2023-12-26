@@ -9,22 +9,31 @@ import BestSellers from './BestSellers.jsx';
 import Jbl from './Jbl.jsx';
 import Explore from './Explore.jsx';
 import SalesProduct from './SalesProduct.jsx';  
+
 function Home({userdata}) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
+import "../css/SlideShow.css";
+
+
   const images = [
-    "https://i.ibb.co/q5xmSrs/abb69c62-8b6f-409d-8c16-17ee11e65044.png",
-    "https://images2.imgbox.com/2e/05/FIVuJlGH_o.jpg",
-    "https://i.ibb.co/wLxgQRL/resize-1703240989234827213spiderman2featured-1.jpg"
-  ];  
+    "https://images2.imgbox.com/60/fd/ItaLWild_o.png",
+      "https://cdn.neowin.com/news/images/uploaded/2023/10/1697743744_xbox-power-your-dreams.jpg",
+      "https://pbs.twimg.com/media/FqmfweYaAAAJwr_.jpg",
+  ];
 
-  const changeImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  const properties = {
+    duration: 5000, 
+    transitionDuration: 1000, 
+    autoplay: true, 
+    indicators: true ,
+    arrows: false,
+    easing: "ease-out",
+    pauseOnHover: true,
 
-  useEffect(() => {
-    const interval = setInterval(changeImage, 5000); 
-    return () => clearInterval(interval); 
-  }, []);
+};
 
   
   
@@ -32,6 +41,15 @@ function Home({userdata}) {
 
 
    <div>
+        <div className="slide-container">
+        <Slide  {...properties}>
+            {images.map((image, index) => (
+                <div key={index} className="each-slide-effect">
+                    <div style={{ 'backgroundImage': `url(${image})` }}></div>
+                </div>
+            ))}
+        </Slide>
+    </div>
   <div className='catandimg'> <div className="Allcategory">
   <div className="div">
   <div className='text-wrapper-2'>Woman's Fashion &gt;</div>
@@ -47,7 +65,9 @@ function Home({userdata}) {
   <div className="text-wrapper-2">Baby’s &amp; Toys</div>
   <div className="text-wrapper-2">Groceries &amp; Pets</div>
   <div className="text-wrapper-2">Health &amp; Beauty</div>
+  
    </div>
+
    <img
           className='ad1img'
           src={images[currentImageIndex]}
@@ -55,13 +75,13 @@ function Home({userdata}) {
           onClick={changeImage} 
         />    </div>
     <Product user={userdata}/>
+
     <Delivery/>
     <Arrivals/>
     <BestSellers/>
     <BestSelling/>
     <Jbl/>
     <Explore/>
-
     </div>
   )
 }
