@@ -9,7 +9,7 @@ import BestSellers from './BestSellers.jsx';
 import Jbl from './Jbl.jsx';
 import Explore from './Explore.jsx';
 import SalesProduct from './SalesProduct.jsx';  
-function Home() {
+function Home({userdata}) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
     "https://i.ibb.co/q5xmSrs/abb69c62-8b6f-409d-8c16-17ee11e65044.png",
@@ -54,7 +54,7 @@ function Home() {
           alt=''
           onClick={changeImage} 
         />    </div>
-    <Product/>
+    <Product user={userdata}/>
     <Delivery/>
     <Arrivals/>
     <BestSellers/>
